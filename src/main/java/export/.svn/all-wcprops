@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/vennmaker/!svn/ver/2572/trunk/VennMaker/src/main/java/export
+END
+ExportData.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/vennmaker/!svn/ver/1822/trunk/VennMaker/src/main/java/export/ExportData.java
+END
+ExportPajek.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/vennmaker/!svn/ver/2296/trunk/VennMaker/src/main/java/export/ExportPajek.java
+END
+CsvOutput.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/vennmaker/!svn/ver/1791/trunk/VennMaker/src/main/java/export/CsvOutput.java
+END
+ExportWriteData.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/vennmaker/!svn/ver/1822/trunk/VennMaker/src/main/java/export/ExportWriteData.java
+END
+ExportCSV.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/vennmaker/!svn/ver/2572/trunk/VennMaker/src/main/java/export/ExportCSV.java
+END

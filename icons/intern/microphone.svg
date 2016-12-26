@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16px"
+   height="16px"
+   id="svg3184"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="microphone.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/nexus/workspace/netz/icons/microphone.png"
+   inkscape:export-xdpi="90.900002"
+   inkscape:export-ydpi="90.900002">
+  <defs
+     id="defs3186">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 8 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="16 : 8 : 1"
+       inkscape:persp3d-origin="8 : 5.3333333 : 1"
+       id="perspective3192" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="12.052713"
+     inkscape:cx="10.226345"
+     inkscape:cy="-0.53607036"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="641"
+     inkscape:window-height="719"
+     inkscape:window-x="0"
+     inkscape:window-y="30">
+    <sodipodi:guide
+       orientation="1,0"
+       position="-4.9554456,14.100495"
+       id="guide3196" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3189">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#c1c2c2;stroke-width:0.10992868;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 10.414844,1.0281179 C 9.1652356,0.51385598 7.7334996,1.1107383 7.2192378,2.3603473 C 6.8567351,3.2411956 7.0462936,4.2122244 7.6274262,4.8888697 L 4.44611,12.619176 C 4.3997874,12.731736 4.4528604,12.859045 4.5654231,12.905369 L 5.1008028,13.125698 L 3.5764844,15.096013 C 4.1309383,15.106859 4.8402505,14.151424 5.388114,13.243937 L 6.3378771,13.634802 C 6.4504395,13.681125 6.5777475,13.62805 6.6240703,13.51549 L 9.8142291,5.7636958 C 9.8207805,5.7477766 9.8254423,5.7315864 9.8281232,5.7153289 C 10.657814,5.5962375 11.405203,5.0544416 11.747075,4.2237251 C 12.261337,2.9741157 11.664453,1.5423798 10.414844,1.0281179 z"
+       id="path2383"
+       inkscape:transform-center-x="1.3111805"
+       inkscape:transform-center-y="1.9165258" />
+    <path
+       transform="matrix(3.2437638e-3,1.3349325e-3,-1.3349325e-3,3.2437638e-3,8.224219,0.1978995)"
+       d="M 588.57143,303.79074 A 151.42857,151.42857 0 1 1 285.71428,303.79074 A 151.42857,151.42857 0 1 1 588.57143,303.79074 z"
+       sodipodi:ry="151.42857"
+       sodipodi:rx="151.42857"
+       sodipodi:cy="303.79074"
+       sodipodi:cx="437.14285"
+       id="path3161"
+       style="opacity:1;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       sodipodi:type="arc"
+       inkscape:transform-center-x="-0.17138687"
+       inkscape:transform-center-y="-4.2863843" />
+  </g>
+</svg>

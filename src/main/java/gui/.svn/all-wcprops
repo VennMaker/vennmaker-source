@@ -1,0 +1,359 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/vennmaker/!svn/ver/2573/trunk/VennMaker/src/main/java/gui
+END
+messages_zh.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2470/trunk/VennMaker/src/main/java/gui/messages_zh.properties
+END
+ColorEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/ColorEditor.java
+END
+EditDataProtection.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/vennmaker/!svn/ver/2296/trunk/VennMaker/src/main/java/gui/EditDataProtection.java
+END
+SelectInterviewDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/SelectInterviewDialog.java
+END
+ExportAudioDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/ExportAudioDialog.java
+END
+ResizableImageIcon.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/vennmaker/!svn/ver/2447/trunk/VennMaker/src/main/java/gui/ResizableImageIcon.java
+END
+ConfigModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/vennmaker/!svn/ver/2351/trunk/VennMaker/src/main/java/gui/ConfigModel.java
+END
+VennMakerMenuToolbar.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/vennmaker/!svn/ver/2296/trunk/VennMaker/src/main/java/gui/VennMakerMenuToolbar.java
+END
+TestVersion.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/vennmaker/!svn/ver/2212/trunk/VennMaker/src/main/java/gui/TestVersion.java
+END
+messages_ru.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2470/trunk/VennMaker/src/main/java/gui/messages_ru.properties
+END
+SpringEmbedder.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/vennmaker/!svn/ver/2545/trunk/VennMaker/src/main/java/gui/SpringEmbedder.java
+END
+AudiorecorderWindow.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/AudiorecorderWindow.java
+END
+VennMakerCellEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/vennmaker/!svn/ver/2291/trunk/VennMaker/src/main/java/gui/VennMakerCellEditor.java
+END
+messages_de.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2503/trunk/VennMaker/src/main/java/gui/messages_de.properties
+END
+ConfigPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/vennmaker/!svn/ver/2569/trunk/VennMaker/src/main/java/gui/ConfigPanel.java
+END
+EditAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/vennmaker/!svn/ver/2554/trunk/VennMaker/src/main/java/gui/EditAttributes.java
+END
+ActorTableDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/vennmaker/!svn/ver/2546/trunk/VennMaker/src/main/java/gui/ActorTableDialog.java
+END
+SaveFileDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/SaveFileDialog.java
+END
+FilterDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/vennmaker/!svn/ver/2567/trunk/VennMaker/src/main/java/gui/FilterDialog.java
+END
+ErrorCenter.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/vennmaker/!svn/ver/2296/trunk/VennMaker/src/main/java/gui/ErrorCenter.java
+END
+ExportDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/vennmaker/!svn/ver/2505/trunk/VennMaker/src/main/java/gui/ExportDialog.java
+END
+messages.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/vennmaker/!svn/ver/2542/trunk/VennMaker/src/main/java/gui/messages.properties
+END
+RelationTableDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/vennmaker/!svn/ver/2573/trunk/VennMaker/src/main/java/gui/RelationTableDialog.java
+END
+VennMakerView.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/vennmaker/!svn/ver/2573/trunk/VennMaker/src/main/java/gui/VennMakerView.java
+END
+StartChooser.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/StartChooser.java
+END
+ErrorUncaughtExceptionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/ErrorUncaughtExceptionHandler.java
+END
+LabelledPie.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/gui/LabelledPie.java
+END
+VennMakerMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/vennmaker/!svn/ver/2528/trunk/VennMaker/src/main/java/gui/VennMakerMenu.java
+END
+RelationTypRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/gui/RelationTypRenderer.java
+END
+ImportData.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/vennmaker/!svn/ver/2325/trunk/VennMaker/src/main/java/gui/ImportData.java
+END
+ExportImageDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2503/trunk/VennMaker/src/main/java/gui/ExportImageDialog.java
+END
+messages_fr.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2470/trunk/VennMaker/src/main/java/gui/messages_fr.properties
+END
+OpenFileDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/OpenFileDialog.java
+END
+RelationTypChooser.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/vennmaker/!svn/ver/2554/trunk/VennMaker/src/main/java/gui/RelationTypChooser.java
+END
+Messages.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/gui/Messages.java
+END
+ConfigData.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/vennmaker/!svn/ver/2447/trunk/VennMaker/src/main/java/gui/ConfigData.java
+END
+AttributeChangedListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/AttributeChangedListener.java
+END
+AboutTeam.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/vennmaker/!svn/ver/2566/trunk/VennMaker/src/main/java/gui/AboutTeam.java
+END
+VennMakerViewMouseController.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/vennmaker/!svn/ver/2573/trunk/VennMaker/src/main/java/gui/VennMakerViewMouseController.java
+END
+VennMakerLoadModule.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/vennmaker/!svn/ver/2511/trunk/VennMaker/src/main/java/gui/VennMakerLoadModule.java
+END
+MouseMenuFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/vennmaker/!svn/ver/2494/trunk/VennMaker/src/main/java/gui/MouseMenuFactory.java
+END
+ColorRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/gui/ColorRenderer.java
+END
+ConfigRelationDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/vennmaker/!svn/ver/2566/trunk/VennMaker/src/main/java/gui/ConfigRelationDialog.java
+END
+EditMetaInformationDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/vennmaker/!svn/ver/1578/trunk/VennMaker/src/main/java/gui/EditMetaInformationDialog.java
+END
+ConfigCell.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/vennmaker/!svn/ver/2357/trunk/VennMaker/src/main/java/gui/ConfigCell.java
+END
+VennMakerViewMouseContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/vennmaker/!svn/ver/2573/trunk/VennMaker/src/main/java/gui/VennMakerViewMouseContext.java
+END
+VennMakerLegend.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/vennmaker/!svn/ver/2573/trunk/VennMaker/src/main/java/gui/VennMakerLegend.java
+END
+messages_sp.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2470/trunk/VennMaker/src/main/java/gui/messages_sp.properties
+END
+PaintLegendPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2104/trunk/VennMaker/src/main/java/gui/PaintLegendPolicy.java
+END
+WaitDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/vennmaker/!svn/ver/2457/trunk/VennMaker/src/main/java/gui/WaitDialog.java
+END
+ArrowLine.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/ArrowLine.java
+END
+DrawLineLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/vennmaker/!svn/ver/2497/trunk/VennMaker/src/main/java/gui/DrawLineLabel.java
+END
+ConfigCellInnerTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/vennmaker/!svn/ver/2354/trunk/VennMaker/src/main/java/gui/ConfigCellInnerTable.java
+END
+BufferedImageTranscoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/gui/BufferedImageTranscoder.java
+END
+ActorPie.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/gui/ActorPie.java
+END
+VennMaker.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/vennmaker/!svn/ver/2573/trunk/VennMaker/src/main/java/gui/VennMaker.java
+END
+VennMaker.java.edited
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/vennmaker/!svn/ver/2400/trunk/VennMaker/src/main/java/gui/VennMaker.java.edited
+END
+ViewStatisticDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/vennmaker/!svn/ver/2296/trunk/VennMaker/src/main/java/gui/ViewStatisticDialog.java
+END
+DrawText.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/gui/DrawText.java
+END

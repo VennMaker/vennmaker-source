@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/vennmaker/!svn/ver/2569/trunk/VennMaker/src/main/java/gui/configdialog/settings
+END
+SettingCloneVirtualNetwork.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/vennmaker/!svn/ver/1701/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingCloneVirtualNetwork.java
+END
+SettingInterviewNotes.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/vennmaker/!svn/ver/1926/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingInterviewNotes.java
+END
+DeleteNetworkSetting.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/vennmaker/!svn/ver/1701/trunk/VennMaker/src/main/java/gui/configdialog/settings/DeleteNetworkSetting.java
+END
+SettingRelationSize.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/vennmaker/!svn/ver/2552/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingRelationSize.java
+END
+SettingLoadInterview.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingLoadInterview.java
+END
+SettingRelationLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/vennmaker/!svn/ver/2296/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingRelationLabel.java
+END
+SettingActorPie.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingActorPie.java
+END
+SettingActorSize.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingActorSize.java
+END
+SettingAddAttributeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingAddAttributeType.java
+END
+SettingZoom.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingZoom.java
+END
+SettingCloneNetwork.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/vennmaker/!svn/ver/1701/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingCloneNetwork.java
+END
+SettingNewNetwork.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/vennmaker/!svn/ver/2392/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingNewNetwork.java
+END
+SettingRelationDash.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/vennmaker/!svn/ver/2556/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingRelationDash.java
+END
+SettingEditAttributeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingEditAttributeType.java
+END
+ImmidiateConfigDialogMacroSetting.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/configdialog/settings/ImmidiateConfigDialogMacroSetting.java
+END
+SettingSector.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/vennmaker/!svn/ver/2177/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingSector.java
+END
+SettingRelationDirection.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingRelationDirection.java
+END
+SettingActorLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingActorLabel.java
+END
+SettingStartNewProject.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/vennmaker/!svn/ver/2225/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingStartNewProject.java
+END
+SettingNetworkLegend.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/vennmaker/!svn/ver/2442/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingNetworkLegend.java
+END
+ConfigDialogSetting.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/configdialog/settings/ConfigDialogSetting.java
+END
+SettingNetworkNotes.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/vennmaker/!svn/ver/1926/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingNetworkNotes.java
+END
+SettingCircle.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/vennmaker/!svn/ver/1863/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingCircle.java
+END
+SettingBackgroundNetworkcard.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingBackgroundNetworkcard.java
+END
+SettingBackgroundImage.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingBackgroundImage.java
+END
+SettingActorImages.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/vennmaker/!svn/ver/2525/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingActorImages.java
+END
+SettingInterviewCreatorFinal.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/vennmaker/!svn/ver/1941/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingInterviewCreatorFinal.java
+END
+SettingRatio.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingRatio.java
+END
+SettingDeleteAttributeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingDeleteAttributeType.java
+END
+SettingInterviewCreator.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/vennmaker/!svn/ver/1495/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingInterviewCreator.java
+END
+ImmidiateConfigDialogSetting.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/configdialog/settings/ImmidiateConfigDialogSetting.java
+END
+SettingChangeAttributeTypeOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingChangeAttributeTypeOrder.java
+END
+SettingChangeTrigger.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingChangeTrigger.java
+END
+SettingRelationColor.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/vennmaker/!svn/ver/2569/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingRelationColor.java
+END
+SettingRenameAttributeGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/vennmaker/!svn/ver/2484/trunk/VennMaker/src/main/java/gui/configdialog/settings/SettingRenameAttributeGroup.java
+END

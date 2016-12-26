@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="536.04352"
+   height="168.6304"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="VennMaker.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:docbase="/home/mathias"
+   inkscape:export-filename="C:\Dokumente und Einstellungen\Ansgar Jonietz\Desktop\Zeichnung.png"
+   inkscape:export-xdpi="60.947094"
+   inkscape:export-ydpi="60.947094"
+   version="1.0">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.91291665"
+     inkscape:cx="233.44424"
+     inkscape:cy="115.48283"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1024"
+     inkscape:window-height="736"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     showgrid="false" />
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective100" />
+    <marker
+       refY="0"
+       orient="auto"
+       refX="0"
+       style="overflow:visible"
+       id="Arrow2Mend"
+       inkscape:stockid="Arrow2Mend">
+      <path
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         transform="scale(-0.6,-0.6)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
+         id="path4254" />
+    </marker>
+    <marker
+       refY="0"
+       orient="auto"
+       refX="0"
+       style="overflow:visible"
+       id="Arrow2Mstart"
+       inkscape:stockid="Arrow2Mstart">
+      <path
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         transform="scale(0.6,0.6)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
+         id="path4251" />
+    </marker>
+    <marker
+       refY="0"
+       orient="auto"
+       refX="0"
+       style="overflow:visible"
+       id="Arrow1Mend"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z"
+         id="path4236" />
+    </marker>
+    <marker
+       refY="0"
+       orient="auto"
+       refX="0"
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       inkscape:stockid="Arrow1Mstart">
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z"
+         id="path4233" />
+    </marker>
+    <linearGradient
+       id="linearGradient2174"
+       inkscape:collect="always">
+      <stop
+         offset="0"
+         style="stop-color:#aa0000;stop-opacity:1;"
+         id="stop2176" />
+      <stop
+         offset="1"
+         style="stop-color:#aa0000;stop-opacity:0;"
+         id="stop2178" />
+    </linearGradient>
+    <linearGradient
+       x1="189.50252"
+       y1="513.43018"
+       x2="299.60745"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="542.93268"
+       xlink:href="#linearGradient2174"
+       id="linearGradient2180" />
+    <linearGradient
+       x1="189.50252"
+       y1="513.43018"
+       x2="299.60745"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="542.93268"
+       xlink:href="#linearGradient2174"
+       id="linearGradient3263" />
+    <linearGradient
+       x1="189.50252"
+       y1="513.43018"
+       x2="299.60745"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="542.93268"
+       xlink:href="#linearGradient2174"
+       id="linearGradient3285" />
+    <linearGradient
+       x1="101.42857"
+       gradientTransform="translate(101.01525,-172.73608)"
+       y1="-194.49251"
+       x2="101.42857"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="-271.64792"
+       xlink:href="#linearGradient3209"
+       id="linearGradient2280" />
+    <linearGradient
+       x1="419.71838"
+       gradientTransform="translate(101.01525,-172.73608)"
+       y1="-223.49123"
+       x2="419.71838"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="-273.5387"
+       xlink:href="#linearGradient3193"
+       id="linearGradient3261" />
+    <linearGradient
+       x1="101.42857"
+       gradientTransform="translate(101.01525,-17.172593)"
+       y1="-194.49251"
+       x2="101.42857"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="-271.64792"
+       xlink:href="#linearGradient3209"
+       id="linearGradient3215" />
+    <linearGradient
+       x1="419.71838"
+       gradientTransform="translate(101.01525,-17.172593)"
+       y1="-223.49123"
+       x2="419.71838"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="-273.5387"
+       xlink:href="#linearGradient3193"
+       id="linearGradient3199" />
+    <linearGradient
+       x1="211.00475"
+       y1="297.30768"
+       x2="211.00475"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="244.85295"
+       xlink:href="#linearGradient3173"
+       id="linearGradient3179" />
+    <radialGradient
+       gradientTransform="matrix(2.1069117,-0.7181728,0.6583803,1.9315095,-384.56677,-78.614982)"
+       inkscape:collect="always"
+       r="32.829956"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient3155"
+       cy="245.26526"
+       id="radialGradient3169"
+       fx="206.56822"
+       cx="206.56822"
+       fy="245.26526" />
+    <linearGradient
+       id="linearGradient3155"
+       inkscape:collect="always">
+      <stop
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;"
+         id="stop3157" />
+      <stop
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;"
+         id="stop3159" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3173"
+       inkscape:collect="always">
+      <stop
+         offset="0"
+         style="stop-color:#4d4d4d;stop-opacity:1;"
+         id="stop3175" />
+      <stop
+         offset="1"
+         style="stop-color:#4d4d4d;stop-opacity:0;"
+         id="stop3177" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3193"
+       inkscape:collect="always">
+      <stop
+         offset="0"
+         style="stop-color:#b3b3b3;stop-opacity:1;"
+         id="stop3195" />
+      <stop
+         offset="1"
+         style="stop-color:#b3b3b3;stop-opacity:0;"
+         id="stop3197" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3209"
+       inkscape:collect="always">
+      <stop
+         offset="0"
+         style="stop-color:#808080;stop-opacity:1;"
+         id="stop3211" />
+      <stop
+         offset="1"
+         style="stop-color:#808080;stop-opacity:0;"
+         id="stop3213" />
+    </linearGradient>
+    <linearGradient
+       x1="189.50252"
+       y1="513.43018"
+       x2="299.60745"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="542.93268"
+       xlink:href="#linearGradient2174"
+       id="linearGradient2328" />
+    <linearGradient
+       x1="189.50252"
+       gradientTransform="translate(-202.72209,-563.5945)"
+       y1="513.43018"
+       x2="299.60745"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="542.93268"
+       xlink:href="#linearGradient2174"
+       id="linearGradient2337" />
+    <linearGradient
+       x1="419.71838"
+       gradientTransform="translate(-101.70684,-736.33058)"
+       y1="-223.49123"
+       x2="419.71838"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="-273.5387"
+       xlink:href="#linearGradient3193"
+       id="linearGradient2345" />
+    <linearGradient
+       x1="101.42857"
+       gradientTransform="translate(98.82742,-517.18885)"
+       y1="-194.49251"
+       x2="101.42857"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="-271.64792"
+       xlink:href="#linearGradient3209"
+       id="linearGradient2352" />
+    <linearGradient
+       x1="419.71838"
+       gradientTransform="translate(89.532724,-562.11321)"
+       y1="-223.49123"
+       x2="419.71838"
+       inkscape:collect="always"
+       gradientUnits="userSpaceOnUse"
+       y2="-273.5387"
+       xlink:href="#linearGradient3193"
+       id="linearGradient2360" />
+    <marker
+       refY="0"
+       orient="auto"
+       refX="0"
+       style="overflow:visible"
+       id="Arrow2Mstarta"
+       inkscape:stockid="Arrow2Mstarta">
+      <path
+         style="font-size:12px;fill:#ababab;fill-rule:evenodd;stroke:#ababab;stroke-width:0.625;stroke-linejoin:round"
+         transform="scale(0.6,0.6)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
+         id="path2296" />
+    </marker>
+    <marker
+       refY="0"
+       orient="auto"
+       refX="0"
+       style="overflow:visible"
+       id="Arrow2MendL"
+       inkscape:stockid="Arrow2MendL">
+      <path
+         style="font-size:12px;fill:#ababab;fill-rule:evenodd;stroke:#ababab;stroke-width:0.625;stroke-linejoin:round"
+         transform="scale(-0.6,-0.6)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
+         id="path2299" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     id="layer1"
+     inkscape:groupmode="layer"
+     transform="translate(-87.792117,-708.27247)">
+    <path
+       style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:cx="209.10158"
+       sodipodi:cy="231.61324"
+       sodipodi:type="arc"
+       transform="matrix(1.0615385,0,0,1.0615385,109.52879,514.62349)"
+       d="M 241.93153,231.61324 A 32.829956,32.829956 0 1 1 176.27162,231.61324 A 32.829956,32.829956 0 1 1 241.93153,231.61324 z"
+       sodipodi:rx="32.829956"
+       id="path3165"
+       sodipodi:ry="32.829956"
+       inkscape:export-filename="/home/mathias/vennmaker-mit-maennchen.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="opacity:0.61825729;fill:url(#radialGradient3169);fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:cx="209.10158"
+       sodipodi:cy="231.61324"
+       sodipodi:type="arc"
+       transform="matrix(1.0615385,0,0,1.0615385,109.52879,514.62349)"
+       d="M 241.93153,231.61324 A 32.829956,32.829956 0 1 1 176.27162,231.61324 A 32.829956,32.829956 0 1 1 241.93153,231.61324 z"
+       sodipodi:rx="32.829956"
+       id="path3167"
+       sodipodi:ry="32.829956"
+       inkscape:export-filename="/home/mathias/vennmaker-mit-maennchen.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="opacity:0.61825729;fill:url(#linearGradient3179);fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:cx="209.10158"
+       sodipodi:cy="231.61324"
+       sodipodi:type="arc"
+       transform="matrix(1.0615385,0,0,-1.0615385,109.52879,1076.0567)"
+       d="M 241.93153,231.61324 A 32.829956,32.829956 0 1 1 176.27162,231.61324 A 32.829956,32.829956 0 1 1 241.93153,231.61324 z"
+       sodipodi:rx="32.829956"
+       id="path3171"
+       sodipodi:ry="32.829956"
+       inkscape:export-filename="/home/mathias/vennmaker-mit-maennchen.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       style="font-size:83.03154755px;font-style:normal;font-weight:normal;fill:url(#linearGradient2360);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       transform="scale(1,-1)"
+       y="-813.81836"
+       x="367.84875"
+       id="text3189"
+       xml:space="preserve"
+       inkscape:export-filename="/home/mathias/vennmaker-mit-maennchen.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         style="fill:url(#linearGradient2360);fill-opacity:1"
+         sodipodi:role="line"
+         id="tspan3191"
+         y="-813.81836"
+         x="367.84875">Maker</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:83.03154755px;font-style:normal;font-weight:normal;fill:#d40000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       id="text3185"
+       y="813.72717"
+       x="367.84875"
+       inkscape:export-filename="/home/mathias/vennmaker-mit-maennchen.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3187"
+         y="813.72717"
+         x="367.84875">Maker</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:83.03154755px;font-style:normal;font-weight:normal;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       id="text3201"
+       y="768.8028"
+       x="87.143433"
+       inkscape:export-filename="/home/mathias/vennmaker-mit-maennchen.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3203"
+         y="768.8028"
+         x="87.143433">Venn</tspan></text>
+    <text
+       style="font-size:83.03154755px;font-style:normal;font-weight:normal;fill:url(#linearGradient2352);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       transform="scale(1,-1)"
+       y="-768.73395"
+       x="87.143433"
+       id="text3205"
+       xml:space="preserve"
+       inkscape:export-filename="/home/mathias/vennmaker-mit-maennchen.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         style="fill:url(#linearGradient2352);fill-opacity:1"
+         id="tspan3207"
+         y="-768.73395"
+         x="87.143433">Venn</tspan></text>
+  </g>
+</svg>

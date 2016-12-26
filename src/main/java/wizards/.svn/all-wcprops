@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/vennmaker/!svn/ver/2423/trunk/VennMaker/src/main/java/wizards
+END
+VennMakerWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/vennmaker/!svn/ver/2423/trunk/VennMaker/src/main/java/wizards/VennMakerWizard.java
+END
+AskActorImportanceWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/vennmaker/!svn/ver/1565/trunk/VennMaker/src/main/java/wizards/AskActorImportanceWizard.java
+END
+AskEgoStartQuestionsWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/wizards/AskEgoStartQuestionsWizard.java
+END
+AskAlterEndQuestionsWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/wizards/AskAlterEndQuestionsWizard.java
+END
+AskRelationsWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/vennmaker/!svn/ver/1600/trunk/VennMaker/src/main/java/wizards/AskRelationsWizard.java
+END
+NetworkWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/vennmaker/!svn/ver/2119/trunk/VennMaker/src/main/java/wizards/NetworkWizard.java
+END
+TextWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/wizards/TextWizard.java
+END
+WizardController.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/wizards/WizardController.java
+END
+SaveProjectWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/vennmaker/!svn/ver/1955/trunk/VennMaker/src/main/java/wizards/SaveProjectWizard.java
+END
+AskActorNamesWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/wizards/AskActorNamesWizard.java
+END
+AskAlterStartQuestionsWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/wizards/AskAlterStartQuestionsWizard.java
+END
+AskEgoEndQuestionsWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/vennmaker/!svn/ver/1439/trunk/VennMaker/src/main/java/wizards/AskEgoEndQuestionsWizard.java
+END

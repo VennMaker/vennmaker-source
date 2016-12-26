@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/vennmaker/!svn/ver/2569/trunk/VennMaker/src/main/java/gui/configdialog
+END
+NewAttributeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/vennmaker/!svn/ver/2137/trunk/VennMaker/src/main/java/gui/configdialog/NewAttributeListener.java
+END
+ConfigDialogRelationCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/vennmaker/!svn/ver/2229/trunk/VennMaker/src/main/java/gui/configdialog/ConfigDialogRelationCache.java
+END
+ConfigDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/vennmaker/!svn/ver/2569/trunk/VennMaker/src/main/java/gui/configdialog/ConfigDialog.java
+END
+FakeSectorInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/vennmaker/!svn/ver/1488/trunk/VennMaker/src/main/java/gui/configdialog/FakeSectorInfo.java
+END
+CirclePreview.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/vennmaker/!svn/ver/2296/trunk/VennMaker/src/main/java/gui/configdialog/CirclePreview.java
+END
+SectorPreviewMouseListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/vennmaker/!svn/ver/1764/trunk/VennMaker/src/main/java/gui/configdialog/SectorPreviewMouseListener.java
+END
+ConfigDialogLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/vennmaker/!svn/ver/2296/trunk/VennMaker/src/main/java/gui/configdialog/ConfigDialogLayer.java
+END
+AuxiliaryFunctions.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/vennmaker/!svn/ver/2308/trunk/VennMaker/src/main/java/gui/configdialog/AuxiliaryFunctions.java
+END
+ConfigDialogTempCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/vennmaker/!svn/ver/2428/trunk/VennMaker/src/main/java/gui/configdialog/ConfigDialogTempCache.java
+END
+SaveElementWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/vennmaker/!svn/ver/2172/trunk/VennMaker/src/main/java/gui/configdialog/SaveElementWrapper.java
+END
+ConfigSaveListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/vennmaker/!svn/ver/1911/trunk/VennMaker/src/main/java/gui/configdialog/ConfigSaveListener.java
+END
+ConfigDialogElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/vennmaker/!svn/ver/1696/trunk/VennMaker/src/main/java/gui/configdialog/ConfigDialogElement.java
+END
+SectorPreview.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/vennmaker/!svn/ver/1777/trunk/VennMaker/src/main/java/gui/configdialog/SectorPreview.java
+END

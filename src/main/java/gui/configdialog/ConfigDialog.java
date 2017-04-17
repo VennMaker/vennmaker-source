@@ -11,6 +11,7 @@ import gui.VennMaker;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -90,9 +91,11 @@ public class ConfigDialog extends JFrame implements ActionListener
 	public ConfigDialog()
 	{
 		// this(CDialogSector.class);
+		
+		this.expandTree = true;
+		
 		this.initialization(true);
 
-		this.expandTree = true;
 	}
 
 	/**
@@ -120,9 +123,8 @@ public class ConfigDialog extends JFrame implements ActionListener
 		tempCache = ConfigDialogTempCache.getInstance();
 
 		// Fenster-Einstellungen
-		this.setSize(VennMaker.getInstance().getSize());
-
 		this.toFront();
+		
 		addWindowListener(new WindowAdapter()
 		{
 			@Override
@@ -214,7 +216,28 @@ public class ConfigDialog extends JFrame implements ActionListener
 		if (this.expandTree)
 			expandTree();
 
-		setLocation(VennMaker.getInstance().getLocation());
+		// issue #1
+		int configWidth = 600, configHeight = 400; // default 600x400
+		Dimension mainProgramDemension = VennMaker.getInstance().getSize();
+		double mainProgWidth = mainProgramDemension.getWidth(),
+				mainProgHeight = mainProgramDemension.getHeight();
+		double configDialogRatio = 2.0 / 3; // or 2/3 of the main window
+		double optWidth = mainProgWidth * configDialogRatio,
+				optHeight = mainProgHeight * configDialogRatio;
+		System.out.println(optWidth + "  " + optHeight);
+		if (mainProgWidth < configWidth) {
+			configWidth = (int)Math.floor(mainProgWidth);
+		} else if (optWidth > configWidth) {
+			configWidth = (int)Math.floor(optWidth);
+		}
+		if (mainProgHeight < configHeight) {
+			configHeight = (int)Math.floor(mainProgHeight);
+		} else if (optHeight > configHeight) {
+			configHeight = (int)Math.floor(optHeight);
+		}
+		this.setSize(configWidth, configHeight);
+		this.setLocationRelativeTo(VennMaker.getInstance());
+		
 		setVisible(show);
 	}
 
@@ -532,7 +555,7 @@ public class ConfigDialog extends JFrame implements ActionListener
 		gbc.gridy = 1;
 
 		JLabel descriptionLabel = new JLabel(
-				Messages.getString("ConfigDialog.Description")); //$NON-NLS-1$
+				Messages.getString("ConfigDialog.Description"), SwingConstants.CENTER); //$NON-NLS-1$
 
 		logoPanel.add(descriptionLabel, gbc);
 

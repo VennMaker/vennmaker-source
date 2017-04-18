@@ -25,6 +25,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -48,7 +49,7 @@ import data.Netzwerk;
  * 
  */
 @SuppressWarnings("rawtypes")
-public class ConfigDialog extends JFrame implements ActionListener
+public class ConfigDialog extends JDialog implements ActionListener
 {
 	private static final long		serialVersionUID	= 1L;
 
@@ -117,6 +118,7 @@ public class ConfigDialog extends JFrame implements ActionListener
 
 	private void initialization(boolean show)
 	{
+		this.setModalityType(ModalityType.APPLICATION_MODAL);
 		this.setResizable(true);
 		cd = this;
 		this.cdLayer = ConfigDialogLayer.getInstance();

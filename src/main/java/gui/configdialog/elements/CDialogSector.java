@@ -119,6 +119,7 @@ public class CDialogSector extends ConfigDialogElement
 
 			cb = new JComboBox<String>();
 
+			fillComboBox(cb, sectorAttrib);
 
 			cb.addActionListener(new ActionListener()
 			{
@@ -144,7 +145,6 @@ public class CDialogSector extends ConfigDialogElement
 				}
 			});
 
-			fillComboBox(cb, sectorAttrib);
 			
 			final JTable table = new JTable(sTableModel);
 			JScrollPane scroll = new JScrollPane(table);

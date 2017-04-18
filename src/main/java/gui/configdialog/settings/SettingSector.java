@@ -15,10 +15,13 @@ import data.Netzwerk;
 /**
  * Setting to apply / change sectors on a network-map.
  * 
+ * This sector setting implements the interface {@link ImmidiateConfigDialogSetting} 
+ * because sector and circle settings are processed separately using
+ * their "add to chart" buttons. 
  * 
  * 
  */
-public class SettingSector implements ConfigDialogSetting
+public class SettingSector implements ImmidiateConfigDialogSetting
 {
 	private Netzwerk				net;
 
@@ -63,6 +66,11 @@ public class SettingSector implements ConfigDialogSetting
 		}
 		else
 			net.getHintergrund().setSectorAttribute(null);
+	}
+
+	@Override
+	public void undo() {
+		
 	}
 
 }

@@ -224,7 +224,6 @@ public class ConfigDialog extends JFrame implements ActionListener
 		double configDialogRatio = 2.0 / 3; // or 2/3 of the main window
 		double optWidth = mainProgWidth * configDialogRatio,
 				optHeight = mainProgHeight * configDialogRatio;
-		System.out.println(optWidth + "  " + optHeight);
 		if (mainProgWidth < configWidth) {
 			configWidth = (int)Math.floor(mainProgWidth);
 		} else if (optWidth > configWidth) {

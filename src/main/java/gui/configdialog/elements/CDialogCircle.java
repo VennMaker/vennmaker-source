@@ -108,7 +108,6 @@ public class CDialogCircle extends ConfigDialogElement
 			}
 
 			cb = new JComboBox();
-			fillComboBox(cb, circleAttrib);
 
 			cb.addActionListener(new ActionListener()
 			{
@@ -117,7 +116,7 @@ public class CDialogCircle extends ConfigDialogElement
 				{
 					if (runActionListener)
 					{
-						int index = cb.getSelectedIndex() - 1;
+						int index = cb.getSelectedIndex();
 						if (index >= 0)
 						{
 							AttributeType a = aTypes.get(index);
@@ -134,6 +133,8 @@ public class CDialogCircle extends ConfigDialogElement
 					}
 				}
 			});
+			
+			fillComboBox(cb, circleAttrib);
 
 			this.runActionListener = true;
 			editAttributeButton.setEnabled(circleAttrib != null);
@@ -258,7 +259,7 @@ public class CDialogCircle extends ConfigDialogElement
 		aTypes = VennMaker.getInstance().getProject()
 				.getAttributeTypesDiscrete(getType);
 
-		cb.addItem("");
+		// cb.addItem("");
 
 		for (int i = 0; i < aTypes.size(); i++)
 		{

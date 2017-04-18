@@ -1,2 +1,4 @@
 /.project
 /target/
+# ignore log files
+*.log

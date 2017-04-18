@@ -119,7 +119,6 @@ public class CDialogSector extends ConfigDialogElement
 
 			cb = new JComboBox<String>();
 
-			fillComboBox(cb, sectorAttrib);
 
 			cb.addActionListener(new ActionListener()
 			{
@@ -129,9 +128,9 @@ public class CDialogSector extends ConfigDialogElement
 					if (executeActionListener)
 					{
 						int index = cb.getSelectedIndex();
-						if (index > 0)
+						if (index >= 0)
 						{
-							sectorAttrib = aTypes.get(index - 1);
+							sectorAttrib = aTypes.get(index);
 							editAttributeButton.setEnabled(true);
 						}
 						else
@@ -145,6 +144,8 @@ public class CDialogSector extends ConfigDialogElement
 				}
 			});
 
+			fillComboBox(cb, sectorAttrib);
+			
 			final JTable table = new JTable(sTableModel);
 			JScrollPane scroll = new JScrollPane(table);
 			table.setCellSelectionEnabled(true);
@@ -405,7 +406,7 @@ public class CDialogSector extends ConfigDialogElement
 		aTypes = VennMaker.getInstance().getProject()
 				.getAttributeTypesDiscrete("ACTOR");
 
-		cb.addItem("");
+		// cb.addItem("");
 
 		for (int i = 0; i < aTypes.size(); i++)
 		{
@@ -417,8 +418,13 @@ public class CDialogSector extends ConfigDialogElement
 		if (selectedAttribute != null)
 			cb.setSelectedItem(ConfigDialog.getElementCaption(selectedAttribute
 					.getLabel()));
-		else
-			cb.setSelectedItem("");
+		else {
+			// cb.setSelectedItem("");
+			if (cb.getItemCount() > 0) {
+				cb.setSelectedIndex(0);
+				cb.setSelectedItem(cb.getItemAt(0));
+			}
+		}
 	}
 
 	public int getNumSectors()

@@ -221,7 +221,7 @@ public class CDialogSector extends ConfigDialogElement
 			cm.getColumn(2).setCellRenderer(new ColorButtonCellRenderer());
 			if (cb.getSelectedIndex() > 0)
 			{
-				sectorAttrib = aTypes.get(cb.getSelectedIndex() - 1);
+				sectorAttrib = aTypes.get(cb.getSelectedIndex());
 				initializeTmpSectors();
 			}
 

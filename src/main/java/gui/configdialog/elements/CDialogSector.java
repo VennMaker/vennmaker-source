@@ -78,6 +78,9 @@ public class CDialogSector extends ConfigDialogElement
 	private JButton												editAttributeButton;
 
 	private JButton												newAttributeButton;
+	
+	// add the sectors to canvas
+	private JButton												addToChartButton;
 
 	private JSlider												sectorTransparency;
 
@@ -97,6 +100,8 @@ public class CDialogSector extends ConfigDialogElement
 	@Override
 	public void buildPanel()
 	{
+		CDialogSector cDialogSector = this;
+		
 		if (dialogPanel == null)
 		{
 			dialogPanel = new JPanel();
@@ -105,6 +110,10 @@ public class CDialogSector extends ConfigDialogElement
 					Messages.getString("CDialogEditAttributeTypes.4")); //$NON-NLS-1$
 			newAttributeButton = new JButton(
 					Messages.getString("EditIndividualAttributeTypeDialog.19")); //$NON-NLS-1$
+			newAttributeButton = new JButton(
+					Messages.getString("EditIndividualAttributeTypeDialog.19")); //$NON-NLS-1$
+			addToChartButton = new JButton(
+					Messages.getString("CDialogSector.AddToChart"));
 			// Sector Dialog
 			sTableModel = new SectorTableModel(this);
 			if (sectorAttrib == null)
@@ -215,6 +224,16 @@ public class CDialogSector extends ConfigDialogElement
 					cb.setSelectedItem(a == null ? "" : a.getLabel());
 				}
 			});
+			
+			addToChartButton.addActionListener(new ActionListener()
+			{
+				@Override
+				public void actionPerformed(ActionEvent e)
+				{
+					getFinalSetting().set();
+				}
+			});
+			
 			TableColumnModel cm = table.getColumnModel();
 			cm.getColumn(1).setCellRenderer(new ColorCellRenderer());
 			cm.getColumn(2).setCellEditor(new ColorButtonCellEditor(this));
@@ -272,7 +291,7 @@ public class CDialogSector extends ConfigDialogElement
 			gbc.gridy = 0;
 			gbc.weightx = 1;
 			gbc.gridwidth = 1;
-			gbc.insets = new Insets(10, 0, 0, 10);
+			gbc.insets = new Insets(10, 0, 0, 6);
 			layout.setConstraints(cb, gbc);
 			dialogPanel.add(cb);
 
@@ -282,7 +301,7 @@ public class CDialogSector extends ConfigDialogElement
 			gbc.gridy = 0;
 			gbc.weightx = 1;
 			gbc.gridwidth = 1;
-			gbc.insets = new Insets(10, 0, 0, 10);
+			gbc.insets = new Insets(10, 0, 0, 6);
 			layout.setConstraints(editAttributeButton, gbc);
 			dialogPanel.add(editAttributeButton);
 
@@ -292,9 +311,19 @@ public class CDialogSector extends ConfigDialogElement
 			gbc.gridy = 0;
 			gbc.weightx = 1;
 			gbc.gridwidth = 1;
-			gbc.insets = new Insets(10, 0, 0, 10);
+			gbc.insets = new Insets(10, 0, 0, 6);
 			layout.setConstraints(newAttributeButton, gbc);
 			dialogPanel.add(newAttributeButton);
+			
+			gbc = new GridBagConstraints();
+			gbc.fill = GridBagConstraints.HORIZONTAL;
+			gbc.gridx = 4;
+			gbc.gridy = 0;
+			gbc.weightx = 1;
+			gbc.gridwidth = 1;
+			gbc.insets = new Insets(10, 0, 0, 6);
+			layout.setConstraints(addToChartButton, gbc);
+			dialogPanel.add(addToChartButton);
 
 			gbc = new GridBagConstraints();
 			gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -310,7 +339,7 @@ public class CDialogSector extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.HORIZONTAL;
 			gbc.gridx = 1;
 			gbc.gridy = 1;
-			gbc.gridwidth = 3;
+			gbc.gridwidth = 4;
 			gbc.weightx = 1;
 			gbc.insets = new Insets(10, 0, 0, 5);
 			layout.setConstraints(sectorTransparency, gbc);
@@ -321,7 +350,7 @@ public class CDialogSector extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.BOTH;
 			gbc.gridx = 0;
 			gbc.gridy = 2;
-			gbc.gridwidth = 4;
+			gbc.gridwidth = 5;
 			gbc.weightx = 1;
 			gbc.weighty = 0.5;
 			gbc.insets = new Insets(0, 10, 0, 10);
@@ -333,7 +362,7 @@ public class CDialogSector extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.BOTH;
 			gbc.gridx = 0;
 			gbc.gridy = 4;
-			gbc.gridwidth = 4;
+			gbc.gridwidth = 5;
 			gbc.weightx = 1;
 			gbc.weighty = 0.5;
 			gbc.insets = new Insets(0, 10, 10, 10);

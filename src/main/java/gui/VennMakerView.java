@@ -330,6 +330,16 @@ public class VennMakerView extends JComponent implements Printable,
 	private Map<Akteur, Image>									actorsIconCache				= new HashMap<Akteur, Image>();
 
 	/**
+	 * Cursor if on free spaces
+	 */
+	private Cursor												cursorDefault;
+	
+	/**
+	 * Cursor if on movable actor
+	 */
+	private Cursor												cursorMovable				= new Cursor(Cursor.MOVE_CURSOR);
+	
+	/**
 	 * Erzeugt eine neue ZeichenflÃ¤che fuer das angegebene Netzwerkobjekt.
 	 * Aenderungen am Modell fuehren nicht zu einem Neuzeichnen der
 	 * Zeichenflaeche. Dies muss explizit durchgefuehrt werden.
@@ -4347,7 +4357,8 @@ public class VennMakerView extends JComponent implements Printable,
 				Toolkit toolkit = Toolkit.getDefaultToolkit();
 				Cursor c = toolkit.createCustomCursor(image, new Point(16, 16),
 						"img");
-				setCursor(c);
+				this.cursorDefault = c;
+				useDefaultCursor();
 			}
 		}
 
@@ -4361,7 +4372,8 @@ public class VennMakerView extends JComponent implements Printable,
 			{
 				Cursor c = toolkit.createCustomCursor(image, new Point(16, 16),
 						"img");
-				setCursor(c);
+				this.cursorDefault = c;
+				useDefaultCursor();
 			}
 		}
 	}
@@ -4381,5 +4393,39 @@ public class VennMakerView extends JComponent implements Printable,
 			legends.put(n, new VennMakerLegend(n));
 
 		return legends.get(n);
+	}
+	
+	/**
+	 * Use default cursor
+	 * This will be useful for changing cursor from other objects
+	 */
+	public void useDefaultCursor() {
+		setCursor(this.cursorDefault);
+	}
+
+	/**
+	 * Use movable cursor
+	 * This will be useful for changing cursor from other objects
+	 */
+	public void useMovableCursor() {
+		setCursor(this.cursorMovable);
+	}
+
+	/**
+	 * set the default cursor
+	 * 
+	 * @param c cursor
+	 */
+	public void setDefaultCursor(Cursor c) {
+		this.cursorDefault = c;
+	}
+	
+	/**
+	 * set the movable cursor
+	 * 
+	 * @param c cursor
+	 */
+	public void setMovableCursor(Cursor c) {
+		this.cursorMovable = c;
 	}
 }

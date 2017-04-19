@@ -2,6 +2,7 @@ package gui;
 
 import gui.VennMaker.ViewMode;
 
+import java.awt.Cursor;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
@@ -178,7 +179,9 @@ public class VennMakerViewMouseContext
 		Akteur akteur = view.searchAkteur(e.getX(), e.getY());
 
 		if (akteur != null && akteur != tooltipAkteur)
-		{
+		{	
+			if (isActorDraggable(akteur))
+				((VennMakerView)e.getSource()).useMovableCursor();
 			// neuer Tooltip koennte bald kommen
 			if (akteur != lastHoverAkteur)
 			{
@@ -191,13 +194,16 @@ public class VennMakerViewMouseContext
 				view.tooltip(e.getPoint(), akteur);
 			}
 		}
-		else if (akteur == null && tooltipAkteur != null)
+		else if (akteur == null)
 		{
-			// Tooltip ausblenden
-			view.hideTooltip();
-			tooltipAkteur = null;
-			lastHoverAkteur = null;
-			lastHoverChange = System.currentTimeMillis();
+			((VennMakerView)e.getSource()).useDefaultCursor();
+			if (tooltipAkteur != null) {
+				// Tooltip ausblenden
+				view.hideTooltip();
+				tooltipAkteur = null;
+				lastHoverAkteur = null;
+				lastHoverChange = System.currentTimeMillis();
+			}
 		}
 		else if (akteur != null && akteur == tooltipAkteur)
 		{
@@ -447,9 +453,21 @@ public class VennMakerViewMouseContext
 
 		boolean notEgo = (pressedOnActor == null || pressedOnActor.getId() != VennMaker
 				.getInstance().getProject().getEgo().getId());
-		
 		return pressedLeftOnActor() && isViewModeSetToNode()
 				&& (notEgo || egoMovable);
+	}
+	
+	/**
+	 * check if an actor is draggable
+	 * 
+	 * @param a {Aktuer} actor element
+	 * @return
+	 */
+	public boolean isActorDraggable(Akteur a) {
+		boolean egoMovable = VennMaker.getInstance().getConfig().isEgoMoveable();
+		boolean notEgo = (a == null || a.getId() != VennMaker
+				.getInstance().getProject().getEgo().getId());
+		return notEgo || egoMovable;
 	}
 
 	/**

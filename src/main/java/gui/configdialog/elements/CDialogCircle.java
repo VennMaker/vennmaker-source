@@ -180,12 +180,12 @@ public class CDialogCircle extends ConfigDialogElement
 			JTable table = new JTable(tModel);
 
 			JTableHeader header = table.getTableHeader();
-			// header.setUpdateTableInRealTime(true); // "Seit 1.3 ungebr�uchlich"
+			// header.setUpdateTableInRealTime(true); // "Seit 1.3 ungebräuchlich"
 			header.addMouseListener(tModel.new ColumnListener(table));
 			header.setReorderingAllowed(true);
 
 			JScrollPane scrollPane = new JScrollPane(table);
-			scrollPane.setPreferredSize(new Dimension(400, 200));
+			scrollPane.setPreferredSize(new Dimension(400, 100));
 
 			GridBagConstraints gbc;
 			GridBagLayout layout = new GridBagLayout();
@@ -196,9 +196,9 @@ public class CDialogCircle extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.HORIZONTAL;
 			gbc.gridx = 0;
 			gbc.gridy = 0;
-			gbc.weightx = 0.25;
+			gbc.weightx = 0.2;
 			gbc.gridwidth = 1;
-			gbc.insets = new Insets(10, 10, 0, 0);
+			gbc.insets = new Insets(10, 10, 0, 5);
 			layout.setConstraints(attLabel, gbc);
 			dialogPanel.add(attLabel);
 
@@ -207,7 +207,7 @@ public class CDialogCircle extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.HORIZONTAL;
 			gbc.gridx = 1;
 			gbc.gridy = 0;
-			gbc.weightx = 0.25;
+			gbc.weightx = 0.2;
 			gbc.gridwidth = 1;
 			gbc.insets = new Insets(10, 0, 0, 5);
 			layout.setConstraints(cb, gbc);
@@ -218,7 +218,7 @@ public class CDialogCircle extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.HORIZONTAL;
 			gbc.gridx = 2;
 			gbc.gridy = 0;
-			gbc.weightx = 0.25;
+			gbc.weightx = 0.2;
 			gbc.gridwidth = 1;
 			gbc.insets = new Insets(10, 0, 0, 5);
 			layout.setConstraints(editAttributeButton, gbc);
@@ -228,7 +228,7 @@ public class CDialogCircle extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.HORIZONTAL;
 			gbc.gridx = 3;
 			gbc.gridy = 0;
-			gbc.weightx = 0.25;
+			gbc.weightx = 0.2;
 			gbc.gridwidth = 1;
 			gbc.insets = new Insets(10, 0, 0, 5);
 			layout.setConstraints(newAttributeButton, gbc);
@@ -238,7 +238,7 @@ public class CDialogCircle extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.HORIZONTAL;
 			gbc.gridx = 4;
 			gbc.gridy = 0;
-			gbc.weightx = 0.25;
+			gbc.weightx = 0.2;
 			gbc.gridwidth = 1;
 			gbc.insets = new Insets(10, 0, 0, 5);
 			layout.setConstraints(addToChartButton, gbc);

@@ -49,7 +49,8 @@ public class SettingSector implements ImmidiateConfigDialogSetting
 		{
 			net.getHintergrund().setSectorLabel(sectorAttr.getLabel());
 			net.getHintergrund().setSectorAttribute(sectorAttr);
-			net.getHintergrund().clearTemporarySectors();
+			// don't need to clear the tempSectors list due to "Add to chart" button
+			// net.getHintergrund().clearTemporarySectors();
 			for (int i = 0; i < num; i++)
 			{
 				SectorInfo si = net.getHintergrund().getSector(i);

@@ -64,6 +64,9 @@ public class CDialogCircle extends ConfigDialogElement
 
 	// add the circles to canvas
 	private JButton					addToChartButton;
+	
+	// delete the circles from canvas
+	private JButton					deleteFromChartButton;
 
 	private JComboBox					cb;
 
@@ -94,6 +97,8 @@ public class CDialogCircle extends ConfigDialogElement
 					Messages.getString("EditIndividualAttributeTypeDialog.19")); //$NON-NLS-1$
 			addToChartButton = new JButton(
 					Messages.getString("ConfigDialog.50"));
+			deleteFromChartButton = new JButton(
+					Messages.getString("ConfigDialog.51"));
 			if (circleAttrib == null)
 				circleAttrib = net.getHintergrund().getCircleAttribute();
 
@@ -173,6 +178,13 @@ public class CDialogCircle extends ConfigDialogElement
 					getFinalSetting().set();
 				}
 			});
+			deleteFromChartButton.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					((SettingCircle)getFinalSetting()).delete();
+				}
+			});
 			
 			JLabel attLabel = new JLabel(
 					Messages.getString("CDialogActorPie.Col0"));
@@ -238,11 +250,21 @@ public class CDialogCircle extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.HORIZONTAL;
 			gbc.gridx = 4;
 			gbc.gridy = 0;
-			gbc.weightx = 0.2;
+			gbc.weightx = 0.1;
 			gbc.gridwidth = 1;
 			gbc.insets = new Insets(10, 0, 0, 5);
 			layout.setConstraints(addToChartButton, gbc);
 			dialogPanel.add(addToChartButton);
+			
+			gbc = new GridBagConstraints();
+			gbc.fill = GridBagConstraints.HORIZONTAL;
+			gbc.gridx = 5;
+			gbc.gridy = 0;
+			gbc.weightx = 0.1;
+			gbc.gridwidth = 1;
+			gbc.insets = new Insets(10, 0, 0, 5);
+			layout.setConstraints(deleteFromChartButton, gbc);
+			dialogPanel.add(deleteFromChartButton);
 
 			/* Previewwindow to display current circles */
 			gbc = new GridBagConstraints();
@@ -250,7 +272,7 @@ public class CDialogCircle extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.BOTH;
 			gbc.gridx = 0;
 			gbc.gridy = 1;
-			gbc.gridwidth = 5;
+			gbc.gridwidth = 6;
 			gbc.weightx = 5.0;
 			gbc.weighty = 5.0;
 			gbc.insets = new Insets(10, 10, 10, 10);
@@ -263,7 +285,7 @@ public class CDialogCircle extends ConfigDialogElement
 			gbc.fill = GridBagConstraints.BOTH;
 			gbc.gridx = 0;
 			gbc.gridy = 2;
-			gbc.gridwidth = 5;
+			gbc.gridwidth = 6;
 			gbc.weightx = 5.0;
 			gbc.weighty = 2.5;
 			gbc.insets = new Insets(10, 10, 10, 10);

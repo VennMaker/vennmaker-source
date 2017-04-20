@@ -73,7 +73,6 @@ public class SettingSector implements ImmidiateConfigDialogSetting
 	 * delete sectors from map
 	 * 
 	 */
-	@Override
 	public void delete()
 	{
 		net.getHintergrund().setNumSectors(0);

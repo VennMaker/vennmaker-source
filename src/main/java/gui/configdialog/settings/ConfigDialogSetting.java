@@ -13,5 +13,4 @@ package gui.configdialog.settings;
 public interface ConfigDialogSetting
 {
 	public void set();
-	public void delete();
 }

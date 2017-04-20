@@ -74,4 +74,22 @@ public class SettingCircle implements ConfigDialogSetting
 //			}
 //		}
 	}
+	
+	/**
+	 * delete circles from map
+	 * 
+	 */
+	public void delete()
+	{
+		BackgroundInfo bgConfig = net.getHintergrund();
+		bgConfig.setNumCircles(0);
+//		bgConfig.setCirclesLabel(label);
+		VennMakerView v = VennMaker.getInstance().getViewOfNetwork(net);
+		if(v != null)
+		{
+			v.updateView();
+			v.updateSectorAndCircleAttributes();
+		}
+		bgConfig.setCircleAttribute(circleAttr);
+	}
 }

@@ -242,7 +242,7 @@ public class CDialogSector extends ConfigDialogElement
 				@Override
 				public void actionPerformed(ActionEvent e)
 				{
-					getFinalSetting().delete();
+					((SettingSector)getFinalSetting()).delete();
 				}
 			});
 			

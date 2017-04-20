@@ -68,6 +68,20 @@ public class SettingSector implements ImmidiateConfigDialogSetting
 		else
 			net.getHintergrund().setSectorAttribute(null);
 	}
+	
+	/**
+	 * delete sectors from map
+	 * 
+	 */
+	@Override
+	public void delete()
+	{
+		net.getHintergrund().setNumSectors(0);
+		VennMakerView v = VennMaker.getInstance().getViewOfNetwork(net);
+		if (v != null)
+			v.updateSectorAndCircleAttributes();
+		net.getHintergrund().setSectorAttribute(null);
+	}
 
 	@Override
 	public void undo() {

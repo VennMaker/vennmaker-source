@@ -1,6 +1,7 @@
 package gui;
 
 import gui.VennMaker.ViewMode;
+import gui.VennMakerView.ButtonSelected;
 
 import java.awt.Cursor;
 import java.awt.Point;
@@ -180,7 +181,7 @@ public class VennMakerViewMouseContext
 
 		if (akteur != null && akteur != tooltipAkteur)
 		{	
-			if (isActorDraggable(akteur))
+			if (isActorDraggable(akteur) && view.getButtonSelectedType() == ButtonSelected.ACTOR)
 				((VennMakerView)e.getSource()).useMovableCursor();
 			// neuer Tooltip koennte bald kommen
 			if (akteur != lastHoverAkteur)

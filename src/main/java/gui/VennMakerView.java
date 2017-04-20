@@ -340,6 +340,16 @@ public class VennMakerView extends JComponent implements Printable,
 	private Cursor												cursorMovable				= new Cursor(Cursor.MOVE_CURSOR);
 	
 	/**
+	 * To identify if one button for adding actors or relations is selected 
+	 * 
+	 */
+	public enum ButtonSelected {
+		ACTOR, RELATION
+	};
+	
+	private ButtonSelected buttonSelectedType = ButtonSelected.ACTOR;
+	
+	/**
 	 * Erzeugt eine neue ZeichenflÃ¤che fuer das angegebene Netzwerkobjekt.
 	 * Aenderungen am Modell fuehren nicht zu einem Neuzeichnen der
 	 * Zeichenflaeche. Dies muss explizit durchgefuehrt werden.
@@ -4358,6 +4368,7 @@ public class VennMakerView extends JComponent implements Printable,
 				Cursor c = toolkit.createCustomCursor(image, new Point(16, 16),
 						"img");
 				this.cursorDefault = c;
+				this.setButtonSelectedType(ButtonSelected.ACTOR);
 				useDefaultCursor();
 			}
 		}
@@ -4373,6 +4384,7 @@ public class VennMakerView extends JComponent implements Printable,
 				Cursor c = toolkit.createCustomCursor(image, new Point(16, 16),
 						"img");
 				this.cursorDefault = c;
+				this.setButtonSelectedType(ButtonSelected.RELATION);
 				useDefaultCursor();
 			}
 		}
@@ -4427,5 +4439,13 @@ public class VennMakerView extends JComponent implements Printable,
 	 */
 	public void setMovableCursor(Cursor c) {
 		this.cursorMovable = c;
+	}
+
+	public ButtonSelected getButtonSelectedType() {
+		return buttonSelectedType;
+	}
+
+	public void setButtonSelectedType(ButtonSelected buttonSelectedType) {
+		this.buttonSelectedType = buttonSelectedType;
 	}
 }

@@ -6,9 +6,11 @@ Contact: contact@kronenwett-adolphs.com
 
 Web: http://www.vennmaker.com
 
-Feedback is very welcome (bugs, issues, suggestions, stories, questions).
+**Feedback is very welcome (bugs, issues, suggestions, stories, questions).**
 
-Volunteers are welcome, too.
+**Volunteers are welcome, too.**
+
+**Donations are welcome.**
 
 
 ### Release Notes

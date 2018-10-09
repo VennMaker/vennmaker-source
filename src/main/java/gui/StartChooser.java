@@ -290,14 +290,34 @@ public class StartChooser extends JDialog implements ActionListener,
 
 		String s = System.getProperty("java.version");
 		String release = s.substring(2, 3);
-		double ver = Double.parseDouble(release);
+		System.out.println("Java version: "+s);
+		double ver = 0; 
+		boolean wrongVersion = true;
+		
+		try {
+			ver = Double.parseDouble(s);
+			if (ver >= 1.8) {
+				wrongVersion = false;
+			}
+		} catch(NumberFormatException e) {
+			release = s.substring(0, 2);
 
-		if (ver < 7)
+			try {
+				ver = Double.parseDouble(release);
+				if (ver >= 10) {
+					wrongVersion = false;
+				}
+			} catch(NumberFormatException f) {
+			}
+
+		}
+
+		if (wrongVersion == true)
 		{
 			JTextArea taJavaVersion = new JTextArea(
 					"You are using outdated Java Version "
 							+ release
-							+ ". (recommended Version 7)\n"
+							+ ".\n"
 							+ "This can probably cause problems loading VennMaker projects.\n"
 							+ "Please use the following link to update Java:");
 

@@ -18,6 +18,9 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
+import java.util.Base64;
+import java.util.Base64.Decoder;
+import java.util.Base64.Encoder;
 import java.util.List;
 import java.util.Vector;
 
@@ -32,8 +35,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-
-import sun.misc.BASE64Decoder;
 
 /**
  * 
@@ -355,7 +356,7 @@ public class VennMakerCrypto
 	{
 		
 		Cipher encryptCipher;
-		sun.misc.BASE64Encoder encoder = new sun.misc.BASE64Encoder();
+		Encoder encoder = Base64.getEncoder();
 
 		final PBEParameterSpec ps = new PBEParameterSpec(salt, 100);
 		SecretKeyFactory kf;
@@ -370,7 +371,7 @@ public class VennMakerCrypto
 
 			byte[] b = in.getBytes("UTF-8");
 			byte[] enc = encryptCipher.doFinal(b);
-			return encoder.encode(enc);
+			return encoder.encodeToString(enc);
 		} catch (NoSuchAlgorithmException exn)
 		{
 			// TODO Auto-generated catch block
@@ -546,7 +547,7 @@ public class VennMakerCrypto
 	{
 
 		Cipher decryptCipher;
-		BASE64Decoder decoder = new BASE64Decoder();
+		Decoder decoder = Base64.getDecoder();
 
 		final PBEParameterSpec ps = new PBEParameterSpec(salt, 100);
 		SecretKeyFactory kf;
@@ -560,7 +561,7 @@ public class VennMakerCrypto
 					.getInstance("PBEWithMD5AndDES/CBC/PKCS5Padding");
 			decryptCipher.init(Cipher.DECRYPT_MODE, k, ps);
 
-			byte[] dec = decoder.decodeBuffer(in);
+			byte[] dec = decoder.decode(in);
 			byte[] b = decryptCipher.doFinal(dec);
 			return new String(b, "UTF-8");
 

@@ -3,6 +3,7 @@ package interview.elements;
 import gui.Messages;
 import gui.VennMaker;
 import gui.configdialog.ConfigDialog;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewElementInformation;
 import interview.InterviewLayer;
 import interview.UpdateListener;
@@ -141,7 +142,7 @@ public class StandardElement extends InterviewElement implements
 			String q = questions.keySet().iterator().next();
 			JLabel lblQuestion = new JLabel("<html>" + q + "</html>");
 			lblQuestion.setFont(lblQuestion.getFont().deriveFont(Font.BOLD)
-					.deriveFont(lblQuestion.getFont().getSize2D() + 4));
+					.deriveFont(VennMakerUIConfig.getFontSize() + 4));
 			g.gridx = x;
 			g.gridy = y;
 			g.gridheight = 1;

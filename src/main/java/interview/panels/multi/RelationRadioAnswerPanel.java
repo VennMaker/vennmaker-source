@@ -2,6 +2,7 @@ package interview.panels.multi;
 
 import gui.Messages;
 import gui.VennMaker;
+import gui.utilities.VennMakerUIConfig;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -216,17 +217,16 @@ public class RelationRadioAnswerPanel extends RadioAnswerPanel implements
 		{
 			JPanel completePanel = new JPanel(new BorderLayout());
 
-			String direction = VennMaker.getInstance().getProject()
-					.getIsDirected(aType.getType()) ? " -- &gt " : " &lt -- &gt ";
-
-			completePanel.add(
-					new JLabel("<html><h2> &emsp &emsp " + relationOwner.getName()
-							+ direction + actors.get(0).getName() + "</h2></html>",
-							SwingConstants.CENTER), BorderLayout.NORTH);
+			String direction = VennMaker.getInstance().getProject().getIsDirected(aType.getType()) ? " -- > " : " < -- > ";
+		
+			JLabel pairTitle = new JLabel(relationOwner.getName() + direction + actors.get(0).getName(), SwingConstants.CENTER);
+			pairTitle.setFont(pairTitle.getFont().deriveFont(VennMakerUIConfig.getFontSize()));
+			
+			completePanel.add(pairTitle, BorderLayout.NORTH);
 
 			JPanel panel = new JPanel(new GridLayout(actors.size() + 1,
 					aType.getPredefinedValues().length + 1));
-
+			
 			panel.add(new JPanel());
 			Object[] preVals = aType.getPredefinedValues();
 

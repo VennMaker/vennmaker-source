@@ -38,6 +38,7 @@ import gui.configdialog.elements.CDialogTrigger;
 import gui.configdialog.elements.CDialogZoom;
 import gui.sidemenu.VennMakerSideMenu;
 import gui.utilities.StringUtilities;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewController;
 import interview.InterviewLayer;
 import interview.elements.alter.AlterMultiAttributeOneActorElement;
@@ -2567,20 +2568,12 @@ public class VennMaker extends JFrame
 
 		loadPlugins();
 
-		// -------------------------
-
-		/*
-		 * Testzeitraum einstellen und das Einschraenkunglevel einstellen.
-		 */
-	   //TestVersion.setTime(VERSION, "2017-01-01 00:00:00.1");
-	   //TestVersion.setLogoON();
-		// TestVersion.setExportOFF();
 
 		try
 		{
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 //			 UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-			 setUIFont (new javax.swing.plaf.FontUIResource("Sans_Serif",Font.PLAIN, 12));
+			 setUIFont (new javax.swing.plaf.FontUIResource("Sans_Serif",Font.PLAIN, (int) VennMakerUIConfig.getFontSize()));
 			 
 		} catch (ClassNotFoundException exn)
 		{

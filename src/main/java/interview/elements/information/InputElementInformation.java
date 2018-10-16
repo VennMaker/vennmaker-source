@@ -89,8 +89,8 @@ public class InputElementInformation extends InterviewElementInformation
 	}
 
 	/**
-	 * Returns the network für the <code>StandardElement</code>
-	 * @return the network für the <code>StandardElement</code>
+	 * Returns the network for the <code>StandardElement</code>
+	 * @return the network for the <code>StandardElement</code>
 	 */
 	public Netzwerk getNetwork()
 	{
@@ -98,8 +98,8 @@ public class InputElementInformation extends InterviewElementInformation
 	}
 
 	/**
-	 * Sets the network für the <code>StandardElement</code>
-	 * @param network the network für the <code>StandardElement</code>
+	 * Sets the network for the <code>StandardElement</code>
+	 * @param network the network for the <code>StandardElement</code>
 	 */
 	public void setNetwork(Netzwerk network)
 	{

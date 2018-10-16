@@ -2,6 +2,7 @@ package interview.panels.multi;
 
 import gui.Messages;
 import gui.VennMaker;
+import gui.utilities.VennMakerUIConfig;
 import interview.panels.SpecialPanel;
 
 import java.awt.BorderLayout;
@@ -398,6 +399,9 @@ class ComponentRenderer implements TableCellRenderer
 		if (parent.getEmptyRows().contains(row))
 			((Component) value).setBackground(new Color(0xffbab0));
 
+
+		table.setRowHeight(row, (int) (VennMakerUIConfig.getFontSize()+5));
+		
 		return (Component) value;
 	}
 }
@@ -560,7 +564,7 @@ class WordWrapHeaderRenderer extends JPanel implements TableCellRenderer
 {
 	private static final long	serialVersionUID	= 1L;
 
-	private JEditorPane				tp;
+	private JTextArea				tp;
 
 	public WordWrapHeaderRenderer(final RadioAnswerPanel radioAnswerPanel)
 	{
@@ -576,21 +580,12 @@ class WordWrapHeaderRenderer extends JPanel implements TableCellRenderer
 		gbc.gridwidth = 1;
 		gbc.gridheight = 1;
 		gbc.insets = new Insets(0, 2, 0, 2);
-/*
+
 		tp = new JTextArea();
 		tp.setLineWrap(true);
 		tp.setWrapStyleWord(true);
-		tp.setSize(new Dimension(100, 100));
+		tp.setSize(new Dimension(300, 100));
 		
-		 Font font = new Font("Verdana", Font.BOLD, 12);
-       tp.setFont(font);
-  */
-		tp = new JEditorPane();
-		tp.setEditable(false);
-		tp.setFocusable(false);
-
-		tp.setContentType("text/html");
-
 		tp.addPropertyChangeListener(new PropertyChangeListener()
 		{
 			@Override
@@ -618,7 +613,9 @@ class WordWrapHeaderRenderer extends JPanel implements TableCellRenderer
 	public Component getTableCellRendererComponent(JTable table, Object value,
 			boolean isSelected, boolean hasFocus, int row, int column)
 	{
-		tp.setText("<p>"+(String) value+"</p><small><br></small>");
+//		tp.setText("<p>"+(String) value+"</p><small><br></small>");
+		tp.setText((String) value);
+		tp.setFont(tp.getFont().deriveFont(VennMakerUIConfig.getFontSize()));
 		return this;
 	}
 }

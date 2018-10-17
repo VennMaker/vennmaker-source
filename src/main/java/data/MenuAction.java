@@ -6,6 +6,7 @@ import events.MenuEvent;
 import files.IO;
 import gui.AboutTeam;
 import gui.ActorTableDialog;
+import gui.ChangeFontSize;
 import gui.ConfigRelationDialog;
 import gui.EditDataProtection;
 import gui.EditMetaInformationDialog;
@@ -202,6 +203,12 @@ public class MenuAction implements MenuListener
 		if ("aboutupdate".equals(e.getInfo().getMessage()))
 		{
 			VennMakerActions.aboutUpdate();
+		}
+		
+
+		if ("changefontsize".equals(e.getInfo().getMessage()))
+		{
+			new ChangeFontSize();
 		}
 
 		if ("aboutteam".equals(e.getInfo().getMessage()))

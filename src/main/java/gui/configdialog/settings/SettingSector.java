@@ -43,6 +43,7 @@ public class SettingSector implements ImmidiateConfigDialogSetting
 	@Override
 	public void set()
 	{
+System.out.println("Set....:"+sectorAttr);		
 		int num = sectors.size();
 		net.getHintergrund().setNumSectors(num);
 		if (sectorAttr != null)

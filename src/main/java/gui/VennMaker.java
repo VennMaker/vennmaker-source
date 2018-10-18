@@ -337,29 +337,20 @@ public class VennMaker extends JFrame
 	 * Das halbtransparente Panel unten rechts, auf dem ggf. Next-Button und
 	 * Infotext angezeigt wird.
 	 */
-	private JPanel										nextPanel;
-
-	public static String								VERSION					= "2.0.0";							//$NON-NLS-1$
-
-	public static int									internVERSION			= 2000000;										// e.g.
-																																			// 1
-																																			// 04
-																																			// 01
-																																			// 11
-																																			// =
+	private JPanel						nextPanel;
+	public static String				VERSION					= "2.0.1";							//$NON-NLS-1$
+	public static int					internVERSION			= 2000001;										// e.g.
 																																			// 1.4.1.11
 
-	public static String								REVISION					= "";											//$NON-NLS-1$
+	public static String				REVISION					= "";											//$NON-NLS-1$
+	private static VennMaker			vennMakerInstance;
+	private JTabbedPane					tabbedPane;
 
-	private static VennMaker						vennMakerInstance;
+	private Map<Netzwerk, JComponent>	tabs						= new HashMap<Netzwerk, JComponent>();
 
-	private JTabbedPane								tabbedPane;
+	private Map<JComponent, Netzwerk>	tabIndex					= new HashMap<JComponent, Netzwerk>();
 
-	private Map<Netzwerk, JComponent>			tabs						= new HashMap<Netzwerk, JComponent>();
-
-	private Map<JComponent, Netzwerk>			tabIndex					= new HashMap<JComponent, Netzwerk>();
-
-	public static final String[]					LANGUAGES				= {
+	public static final String[]		LANGUAGES				= {
 			"English", //$NON-NLS-1$
 			"Deutsch", //$NON-NLS-1$
 			"\u0440\u0443\u0441\u0441\u043A\u0438\u0439", /* russian *///$NON-NLS-1$

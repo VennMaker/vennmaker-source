@@ -21,23 +21,18 @@ public class StandardElementDemandingActors extends StandardElement
 	@Override
 	public boolean shouldBeSkipped()
 	{
-System.out.println("shouldBeSkipped A");	
 		if (fSelector != null)
 		{
-System.out.println("shouldBeSkipped B");			
 			List<Akteur> filteredActors = fSelector.getFilteredActors();
 			if (filteredActors == null || filteredActors.size() <= 0)
 			{
-System.out.println("shouldBeSkipped C");
 				return true;
 			}
 		}
 		if (getActors().size() < 1)
 		{
-System.out.println("shouldBeSkipped D");			
 			return true;
 		}
-System.out.println("shouldBeSkipped E");		
 		return false;
 	}
 

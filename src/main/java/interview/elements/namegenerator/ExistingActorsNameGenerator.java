@@ -260,8 +260,12 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 			@Override
 			public void valueChanged(ListSelectionEvent arg0)
 			{
-				if (selectedActorsList.getSelectedIndex() >= 0)
+				if (selectedActorsList.getSelectedIndex() >= 0) {
 					alreadyNamedList.clearSelection();
+				}
+								
+				updateNumberActors();
+				updateNumberActorsText();
 			}
 		});
 
@@ -271,8 +275,12 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 			@Override
 			public void valueChanged(ListSelectionEvent arg0)
 			{
-				if (alreadyNamedList.getSelectedIndex() >= 0)
+				if (alreadyNamedList.getSelectedIndex() >= 0) {
 					selectedActorsList.clearSelection();
+				}
+
+				updateNumberActors();
+				updateNumberActorsText();
 			}
 		});
 
@@ -440,6 +448,21 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 
 		return controllerDialog;
 	}
+	
+	
+	private boolean isMaximum() {
+		int maxActors = (Integer) maxActorSpinner.getValue();
+
+		if (numberOfAllActors + 1 > maxActors && maxActors != 0)
+		{
+			JOptionPane
+					.showMessageDialog(
+							VennMaker.getInstance(),
+							Messages.getString("NameGenerator.Define") + maxActors + Messages.getString("NameGenerator.Actors")); //$NON-NLS-1$ //$NON-NLS-2$
+			return true;
+		}
+		return false;
+	}
 
 	/**
 	 * This Routine gets started if the user trys to add a new actor. It tests if
@@ -455,7 +478,7 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 					Messages.getString("NameGenerator.InsertName")); //$NON-NLS-1$
 			return;
 		}
-		else if (numberOfAllActors + 1 > maxActors && maxActors != 0)
+		else if (isMaximum() == true)
 		{
 			JOptionPane
 					.showMessageDialog(
@@ -886,7 +909,7 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 			JOptionPane
 					.showMessageDialog(
 							VennMaker.getInstance(),
-							Messages.getString("NameGenerator.Only") + maxActors + Messages.getString("NameGenerator.ActorsAllowed") + (numberOfAllActors - maxActors) + Messages.getString("NameGenerator.Actors2")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+							Messages.getString("NameGenerator.Only") + " " + maxActors + Messages.getString("NameGenerator.ActorsAllowed") + (numberOfAllActors - maxActors) + Messages.getString("NameGenerator.Actors2")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
 			return false;
 		}
@@ -1018,10 +1041,10 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 
 	private void updateNumberActors()
 	{
-		Vector<Akteur> currentActors = VennMaker.getInstance().getProject()
-				.getAkteure();
+		Vector<Akteur> currentActors = VennMaker.getInstance().getProject().getAkteure();
 
-		this.numberOfAllActors = currentActors.size() + actorsToCreate.size();
+//		this.numberOfAllActors = currentActors.size() + actorsToCreate.size();
+		this.numberOfAllActors = selectedActorsListModel.size();
 
 		if (currentActors.contains(VennMaker.getInstance().getProject().getEgo()))
 			this.numberOfAllActors--;

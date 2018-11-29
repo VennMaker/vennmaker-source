@@ -1026,9 +1026,19 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 	private void updateNumberActorsText()
 	{
 		if (this.numberOfAllActors >= 0)
+		{
+			String textWarning = "";			
+			int maxActors = (Integer) maxActorSpinner.getValue();
+			if ((maxActors > 0 ) && (this.numberOfAllActors > maxActors)) 
+			{
+				textWarning = "!";
+			}
+
 			numberAllActors.setText(""
 					+ Messages.getString("NameGenerator.Alteri") + ": "
-					+ this.numberOfAllActors);
+					+ (this.numberOfAllActors + alreadyNamedListModel.size() )
+					+ " ("+this.numberOfAllActors+textWarning+")");
+		}
 		/*
 		 * if ((this.numberOfAllActors > VennMaker.getInstance().getProject()
 		 * .getMaxNumberActors()) &&

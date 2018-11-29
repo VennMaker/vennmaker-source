@@ -31,6 +31,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JEditorPane;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -108,12 +109,13 @@ public class RadioAnswerPanel extends SpecialPanel implements
 		RadioTableModel radioTableModel = new RadioTableModel(actors, aType,
 				answers);
 		radioTable = new JTable(radioTableModel);
-		radioTable.setDefaultRenderer(JRadioButton.class, new ComponentRenderer(
-				this));
-		radioTable.setDefaultEditor(JRadioButton.class, new RadioButtonEditor(
-				new JCheckBox()));
+		radioTable.setDefaultRenderer(JRadioButton.class, new ComponentRenderer(this));
+		radioTable.setDefaultEditor(JRadioButton.class, new RadioButtonEditor(new JCheckBox()));
+
 		WordWrapHeaderRenderer headerRenderer = new WordWrapHeaderRenderer(this);
 		radioTable.getTableHeader().setDefaultRenderer(headerRenderer);
+		radioTable.setRowHeight((int) (VennMakerUIConfig.getFontSize()+15));
+
 		JScrollPane rightScroll = new JScrollPane(radioTable);
 
 		rightPanel.add(radioTable.getTableHeader(), BorderLayout.NORTH);
@@ -133,6 +135,7 @@ public class RadioAnswerPanel extends SpecialPanel implements
 		actorTable.setDefaultRenderer(JLabel.class, new ComponentRenderer(this));
 		actorTable.getTableHeader().setDefaultRenderer(
 				new WordWrapHeaderRenderer(this));
+		actorTable.setRowHeight((int) (VennMakerUIConfig.getFontSize()+15));
 		leftPanel = new JPanel(new BorderLayout());
 		JScrollPane leftScroll = new JScrollPane(actorTable);
 		leftPanel.add(actorTable.getTableHeader(), BorderLayout.NORTH);
@@ -174,8 +177,9 @@ public class RadioAnswerPanel extends SpecialPanel implements
 			for (Akteur a : actors)
 			{
 				ButtonModel bm = answers.get(a).getSelection();
-				if (bm == null)
+				if (bm == null) {
 					return false;
+				}
 				String value = bm.getActionCommand();
 				hm.put(a, value);
 				a.setAttributeValue(aType, n, value);
@@ -183,7 +187,6 @@ public class RadioAnswerPanel extends SpecialPanel implements
 			}
 			oldAttributeValues.put(n, hm);
 		}
-
 		return true;
 	}
 
@@ -400,8 +403,8 @@ class ComponentRenderer implements TableCellRenderer
 			((Component) value).setBackground(new Color(0xffbab0));
 
 
-		table.setRowHeight(row, (int) (VennMakerUIConfig.getFontSize()+5));
-		
+//		table.setRowHeight(row, (int) (VennMakerUIConfig.getFontSize()+5));
+
 		return (Component) value;
 	}
 }
@@ -502,8 +505,10 @@ class RadioTableModel extends AbstractTableModel
 					rb.setSelected(true);
 				}
 			}
-			if (answer == null)
+			if (answer == null) {
 				answers.put(a, null);
+			}
+			
 			data.put(a, bg);
 		}
 	}

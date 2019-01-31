@@ -86,7 +86,7 @@ public class AboutTeam extends JDialog
 				+ " " //$NON-NLS-1$
 				+ VennMaker.VERSION
 				+ ", more Information: www.vennmaker.com" //$NON-NLS-1$
-				+ "<br><br> &copy; 2007 - 2018 M. Sch\u00f6nhuth, M. Gamper, M. Stark, M. Kronenwett" //$NON-NLS-1$
+				+ "<br><br> &copy; 2007 - 2019 M. Sch\u00f6nhuth, M. Gamper, M. Stark, M. Kronenwett" //$NON-NLS-1$
 				+ "<br><br> Team:" //$NON-NLS-1$
 				+ " M. Sch\u00f6nhuth, M. Gamper, M. Kronenwett, M. Stark. "; //$NON-NLS-1$
 

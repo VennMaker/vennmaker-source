@@ -522,4 +522,10 @@ public class RelationRadioAnswerPanel extends RadioAnswerPanel implements
 			selectedGroup.setSelected(model, true);
 		}
 	}
+	
+	@Override
+	public boolean validateInput()
+	{
+		return true;
+	}
 }

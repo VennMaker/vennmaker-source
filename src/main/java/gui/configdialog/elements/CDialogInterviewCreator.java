@@ -686,8 +686,10 @@ public class CDialogInterviewCreator extends ConfigDialogElement implements
 				elementToShow.setId(((InterviewElement) nodeToShow.getUserObject())
 						.getId());
 				selectedValue = elementToShow;
-				if (configPanel != null)
+				if (configPanel != null) {
+System.out.println("HHHHHHHHHHHHALLLO");				
 					configPanel.removeAll();
+					}
 				btnRemove.setEnabled(true);
 				rebuild();
 

@@ -632,6 +632,7 @@ public class BackgroundInfo implements Cloneable, Serializable
 
 	private void placePointAtCircleCorner(Point2D p, double circleRadius)
 	{
+	
 		double x = p.getX();
 		double y = p.getY();
 		double length = p.distance(0, 0);

@@ -603,7 +603,9 @@ public class InterviewController extends WindowAdapter
 
 			VennMaker.getInstance().setNextVisible(false);
 
-			this.dialog.dispose();
+			if (this.dialog != null) {
+				this.dialog.dispose();
+			}
 
 			String info = Messages.getString("InterviewController.3");
 
@@ -809,10 +811,12 @@ public class InterviewController extends WindowAdapter
 	 */
 	public void next()
 	{
-		boolean wasSwitchedToNetwork = currentElement instanceof SwitchToNetworkElement;
-		boolean wasSwitchedToNetworkAutoDraw = currentElement instanceof SwitchToNetworkElementAutoDraw;
+		boolean wasSwitchedToNetwork 			= currentElement instanceof SwitchToNetworkElement;
+		boolean wasSwitchedToNetworkAutoDraw 	= currentElement instanceof SwitchToNetworkElementAutoDraw;
 		
-		if (!currentElement.shouldBeSkipped()) System.out.println("SHOULD NOT BE SKIPPED().............");
+		if (!currentElement.shouldBeSkipped()) {
+			System.out.println("SHOULD NOT BE SKIPPED().............");
+		}
 		
 		if (!currentElement.validateInput() || !currentElement.shouldBeSkipped()
 				&& !currentElement.writeData())

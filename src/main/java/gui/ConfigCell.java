@@ -29,23 +29,18 @@ public class ConfigCell extends AbstractCellEditor implements TableCellEditor,
 {
 
 	private static final long		serialVersionUID	= 1L;
-
-	private JPanel						panel;
-
-	private JLabel						attribGroupName;
-
+	private JPanel					panel;
+	private JLabel					attribGroupName;
 	private JComboBox<Object>		attribSelector;
-
 	private ConfigCellInnerTable	innerTable;
-
 	private JScrollPane				jsp;
-
+	
 	public ConfigCell()
 	{
-		panel = new JPanel();
+		panel 			= new JPanel();
 		attribGroupName = new JLabel();
-		attribSelector = new JComboBox<Object>();
-		innerTable = new ConfigCellInnerTable();
+		attribSelector 	= new JComboBox<Object>();
+		innerTable 		= new ConfigCellInnerTable();
 
 		panel.setLayout(new GridBagLayout());
 

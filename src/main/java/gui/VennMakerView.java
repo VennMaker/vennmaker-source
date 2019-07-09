@@ -1038,8 +1038,9 @@ public class VennMakerView extends JComponent implements Printable,
 			this.paintLogo(g);
 
 		// Legende einzeichnen
-		if (drawLegend)
-			getLegend(netzwerk).paintLegend(g);
+		if (drawLegend && getLegend(netzwerk) != null) {
+				getLegend(netzwerk).paintLegend(g);
+		}
 
 		// Netzwerkname zeichnen
 		if (drawNetworkName)

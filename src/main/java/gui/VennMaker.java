@@ -338,8 +338,8 @@ public class VennMaker extends JFrame
 	 * Infotext angezeigt wird.
 	 */
 	private JPanel						nextPanel;
-	public static String				VERSION					= "2.0.1";							//$NON-NLS-1$
-	public static int					internVERSION			= 2000001;										// e.g.
+	public static String				VERSION					= "2.0.2 beta";							//$NON-NLS-1$
+	public static int					internVERSION			= 2000002;										// e.g.
 																																			// 1.4.1.11
 
 	public static String				REVISION					= "";											//$NON-NLS-1$

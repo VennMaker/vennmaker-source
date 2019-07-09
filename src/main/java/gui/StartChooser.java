@@ -288,7 +288,7 @@ public class StartChooser extends JDialog implements ActionListener,
 		// -------------------------------------------- Information bei alter Java
 		// Version ------------------------------------------------
 
-		String s = System.getProperty("java.version");
+/*		String s = System.getProperty("java.version");
 		String release = s.substring(2, 3);
 		System.out.println("Java version: "+s);
 		double ver = 0; 
@@ -375,6 +375,7 @@ public class StartChooser extends JDialog implements ActionListener,
 			gbc.insets = new Insets(HEIGHT, 23, HEIGHT, 10);
 			add(linkLabel, gbc);
 		}
+		*/
 		// --------------------------------------------------------------------------------------------------------------------------------
 
 		zeile = 3;

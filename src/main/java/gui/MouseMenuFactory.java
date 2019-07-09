@@ -300,6 +300,7 @@ public class MouseMenuFactory
 		}
 		else
 		{
+			try {
 			if (VennMaker
 					.getInstance()
 					.getProject()
@@ -310,6 +311,11 @@ public class MouseMenuFactory
 											.getMainAttributeType("ACTOR"),
 									view.getNetzwerk())))
 				shrinkItem.setEnabled(false);
+			}catch(IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+			}
+			
+			try {
 			if (VennMaker
 					.getInstance()
 					.getProject()
@@ -320,6 +326,9 @@ public class MouseMenuFactory
 											.getMainAttributeType("ACTOR"),
 									view.getNetzwerk())))
 				enlargeItem.setEnabled(false);
+			}catch(IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+			}
 		}
 
 		enlargeItem.addActionListener(new ActionListener()

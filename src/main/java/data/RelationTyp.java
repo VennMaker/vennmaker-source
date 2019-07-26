@@ -5,7 +5,7 @@ import java.awt.Color;
 
 /**
  * Beschreibt den Typ der Relation zwischen zwei Akteuren. Dies beinhaltet die
- * graphische Repr�sentation bei Auswahl (Icon) und die Liniendarstellung.
+ * graphische Repraesentation bei Auswahl (Icon) und die Liniendarstellung.
  * 
  * 
  */

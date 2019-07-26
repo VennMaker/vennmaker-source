@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
   
   
@@ -46,11 +45,13 @@
   		<type>jar</type>
   		<scope>compile</scope>
   	</dependency>
-  	<dependency>
-  		<groupId>com.thoughtworks.xstream</groupId>
-  		<artifactId>xstream</artifactId>
-  		<version>1.4.2</version>
-  	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
+	<dependency>
+	    <groupId>com.thoughtworks.xstream</groupId>
+	    <artifactId>xstream</artifactId>
+	    <version>1.4.11.1</version>
+	</dependency>
+
   	<dependency>
   		<groupId>xpp3</groupId>
   		<artifactId>xpp3_min</artifactId>
@@ -77,15 +78,18 @@
   	</dependency>
 
 
-     <dependency>
+    <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-shapefile</artifactId>
             <version>22-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-swing</artifactId>
-        </dependency>
+   </dependency>
+   <dependency>
+        <groupId>org.geotools</groupId>
+        <artifactId>gt-swing</artifactId>
+        <version>${geotools.version}</version>
+    </dependency>
+
+
         
         
   </dependencies>
@@ -110,7 +114,7 @@
           </snapshots>
           <id>boundless</id>
           <name>Boundless Maven Repository</name>
-          <url>http://repo.boundlessgeo.com/main</url>
+          <url>http://repo.boundlessgeo.com/main/</url>
         </repository>
     </repositories>
     

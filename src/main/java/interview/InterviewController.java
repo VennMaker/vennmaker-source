@@ -900,7 +900,7 @@ public class InterviewController extends WindowAdapter
 			{
 				/**
 				 * Falls erstes Element geskipped werden soll, wird von nun an
-				 * vorw�rts gelaufen.
+				 * vorwrts gelaufen.
 				 */
 				if (layer.getPointer() == 0
 						&& currentElement.getInternalPointerValue() == 0)

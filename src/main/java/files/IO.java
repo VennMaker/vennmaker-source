@@ -310,7 +310,7 @@ public class IO
 
 			FileOperations.changeRootFolder(chooser.getRootFolder());
 
-			// von WasVmp h�ngt ab ob die Bilder, Audio-Files usw kopiert
+			// von Was Vmp haengt ab ob die Bilder, Audio-Files usw kopiert
 			// werden...
 			// workaround ... bleibt erstmal false, damit immer kopiert wird.
 			boolean wasVmp = false;

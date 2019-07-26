@@ -8,7 +8,7 @@ import util.RepeatRunner;
 import util.ResetSingleton;
 
 /**
- * Nur ein Test-Case für Repeat und Reset von Singletons
+ * Nur ein Test-Case fr Repeat und Reset von Singletons
  * 
  * 
  * 

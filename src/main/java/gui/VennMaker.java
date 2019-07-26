@@ -3272,7 +3272,7 @@ public class VennMaker extends JFrame
 
 	/**
 	 * Aufruf wenn ein neues Projekt / Interview angelegt wird, somit wird
-	 * gew�hrleistet, das VennMaker sich selber wieder als Listener beim
+	 * gewhrleistet, das VennMaker sich selber wieder als Listener beim
 	 * EventProcessor anmeldet.
 	 */
 	public void resetEventListenerIsSetFlag()

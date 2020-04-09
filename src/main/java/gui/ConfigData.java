@@ -13,7 +13,7 @@ import javax.swing.JComboBox;
 public class ConfigData
 {
 	/**
-	 * Klasse zur Verwaltung aller Eigenschaften zu dem zugehörigem Attribut
+	 * Klasse zur Verwaltung aller Eigenschaften zu dem zugehrigem Attribut
 	 * 
 	 */
 	static public class Internal
@@ -28,7 +28,7 @@ public class ConfigData
 		/**
 		 * Erstellt 1:1 Abbildung von keys (AttributeType-Name auf Wert) 
 		 * @param keys Eigenschaft
-		 * @param values Mögliche Werte 
+		 * @param values Mgliche Werte 
 		 * @param valueType Angabe der Klasse der Werte
 		 */
 		public Internal(String[] keys, Object[] values, Class<?> valueType)
@@ -48,7 +48,7 @@ public class ConfigData
 	public String							attributeGroupName;
 
 	/**
-	 * Checkboxen für die Attribute
+	 * Checkboxen fr die Attribute
 	 */
 	public JComboBox<Object>			attributeSelector;
 

@@ -72,7 +72,7 @@ public class SectorCirclePreview extends JPanel
 	private CDialogSector							parentConfig;
 
 	/**
-	 * Graphics Objekt kann unter umständen nicht wieder deserialisiert werden 
+	 * Graphics Objekt kann unter umstaenden nicht wieder deserialisiert werden 
 	   Fehlermeldung:
 	   com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter$UnknownFieldException: No such field sun.awt.image.BufImgSurfaceData.dirty
 	   (siehe: Ticket #1023)

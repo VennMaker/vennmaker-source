@@ -49,14 +49,14 @@ public class FilterDialog extends JDialog implements WindowListener
 
 	/**
 	 * speichert die Voraussetzungen zum Filtern - alle Filtereinstellungen, die
-	 * mit AND verkn�pft sind, erhalten die gleiche Integer-Kennzahl. OR -
-	 * Verkn�pfungen werden durch unterschiedliche Integer-Kennzahlen
+	 * mit AND verknpft sind, erhalten die gleiche Integer-Kennzahl. OR -
+	 * Verknpfungen werden durch unterschiedliche Integer-Kennzahlen
 	 * gekennzeichnet
 	 */
 	private HashMap<Integer, Vector<Filterparameter>>	filters						= new HashMap<Integer, Vector<Filterparameter>>();
 
 	/**
-	 * Enth�lt die Combo-Boxen
+	 * Enthlt die Combo-Boxen
 	 */
 	private JPanel													comboBoxPanel;
 
@@ -303,7 +303,7 @@ public class FilterDialog extends JDialog implements WindowListener
 
 	/**
 	 * Die Methode wird aufgerufen wenn der Benutzer "UND" oder "ODER" als
-	 * Verkn�pfung ausw�hlt
+	 * Verknpfung auswhlt
 	 */
 	private void addComponents()
 	{
@@ -460,7 +460,7 @@ public class FilterDialog extends JDialog implements WindowListener
 
 		/**
 		 * Wird aufgerufen wenn der Benutzer "UND" oder "ODER" oder " " als
-		 * Verkn�pfung ausw�hlt
+		 * Verknpfung auswhlt
 		 */
 		@Override
 		public void actionPerformed(ActionEvent e)
@@ -468,8 +468,8 @@ public class FilterDialog extends JDialog implements WindowListener
 			JComboBox box = (JComboBox) e.getSource();
 
 			/**
-			 * Wird " " als Verkn�pfung gew�hlt werden die restlichen
-			 * Combo-Boxen entfernt, ansonsten werden Combo-Boxen hinzugef�gt
+			 * Wird " " als Verknpfung gewhlt werden die restlichen
+			 * Combo-Boxen entfernt, ansonsten werden Combo-Boxen hinzugefgt
 			 */
 			if (box.getSelectedItem().equals(" ")) //$NON-NLS-1$
 			{
@@ -514,8 +514,8 @@ public class FilterDialog extends JDialog implements WindowListener
 
 		/**
 		 * speichert die Voraussetzungen zum Filtern - alle Filtereinstellungen,
-		 * die mit AND verkn�pft sind, erhalten die gleiche Integer-Kennzahl. OR -
-		 * Verkn�pfungen werden durch unterschiedliche Integer-Kennzahlen
+		 * die mit AND verknpft sind, erhalten die gleiche Integer-Kennzahl. OR -
+		 * Verknpfungen werden durch unterschiedliche Integer-Kennzahlen
 		 * gekennzeichnet
 		 */
 		private HashMap<Integer, Vector<Filterparameter>>	filters			= new HashMap<Integer, Vector<Filterparameter>>();

@@ -4,6 +4,7 @@ import files.FileOperations;
 import gui.Messages;
 import gui.VennMaker;
 import gui.configdialog.ConfigDialog;
+import gui.utilities.VennMakerUIConfig;
 import interview.elements.InterviewElement;
 import interview.elements.StandardElement;
 import interview.elements.meta.SwitchToNetworkElement;
@@ -34,6 +35,7 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
 
 import org.jvnet.flamingo.common.icon.ResizableIcon;
 import org.jvnet.flamingo.svg.SvgBatikResizableIcon;
@@ -203,6 +205,9 @@ public class InterviewController extends WindowAdapter
 		next = new JButton();
 		prev = new JButton();
 
+		next.setFont(UIManager.getFont("Label.font").deriveFont(VennMakerUIConfig.getFontSize()));
+		prev.setFont(UIManager.getFont("Label.font").deriveFont(VennMakerUIConfig.getFontSize()));
+		
 		/**
 		 * add ActionListener and shortcuts to buttons
 		 */
@@ -895,7 +900,7 @@ public class InterviewController extends WindowAdapter
 			{
 				/**
 				 * Falls erstes Element geskipped werden soll, wird von nun an
-				 * vorw�rts gelaufen.
+				 * vorwrts gelaufen.
 				 */
 				if (layer.getPointer() == 0
 						&& currentElement.getInternalPointerValue() == 0)

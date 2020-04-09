@@ -70,4 +70,5 @@ public abstract class SpecialPanel extends JPanel
 	 *         fields all filled) <code>false</code> if the input is not correct
 	 */
 	public abstract boolean validateInput();
+	
 }

@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Setzt für einen Test-Case eine bestimmte Anzahl an durchläufen.
+ * Setzt fuer einen Test-Case eine bestimmte Anzahl an durchlaufen.
  * 
  * 
  */

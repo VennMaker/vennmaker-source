@@ -38,6 +38,7 @@ import gui.configdialog.elements.CDialogTrigger;
 import gui.configdialog.elements.CDialogZoom;
 import gui.sidemenu.VennMakerSideMenu;
 import gui.utilities.StringUtilities;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewController;
 import interview.InterviewLayer;
 import interview.elements.alter.AlterMultiAttributeOneActorElement;
@@ -115,6 +116,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -336,29 +338,20 @@ public class VennMaker extends JFrame
 	 * Das halbtransparente Panel unten rechts, auf dem ggf. Next-Button und
 	 * Infotext angezeigt wird.
 	 */
-	private JPanel										nextPanel;
-
-	public static String								VERSION					= "2.0.0";							//$NON-NLS-1$
-
-	public static int									internVERSION			= 2000000;										// e.g.
-																																			// 1
-																																			// 04
-																																			// 01
-																																			// 11
-																																			// =
+	private JPanel						nextPanel;
+	public static String				VERSION					= "2.0.3";							//$NON-NLS-1$
+	public static int					internVERSION			= 2000003;										// e.g.
 																																			// 1.4.1.11
 
-	public static String								REVISION					= "";											//$NON-NLS-1$
+	public static String				REVISION					= "";											//$NON-NLS-1$
+	private static VennMaker			vennMakerInstance;
+	private JTabbedPane					tabbedPane;
 
-	private static VennMaker						vennMakerInstance;
+	private Map<Netzwerk, JComponent>	tabs						= new HashMap<Netzwerk, JComponent>();
 
-	private JTabbedPane								tabbedPane;
+	private Map<JComponent, Netzwerk>	tabIndex					= new HashMap<JComponent, Netzwerk>();
 
-	private Map<Netzwerk, JComponent>			tabs						= new HashMap<Netzwerk, JComponent>();
-
-	private Map<JComponent, Netzwerk>			tabIndex					= new HashMap<JComponent, Netzwerk>();
-
-	public static final String[]					LANGUAGES				= {
+	public static final String[]		LANGUAGES				= {
 			"English", //$NON-NLS-1$
 			"Deutsch", //$NON-NLS-1$
 			"\u0440\u0443\u0441\u0441\u043A\u0438\u0439", /* russian *///$NON-NLS-1$
@@ -2469,11 +2462,10 @@ public class VennMaker extends JFrame
 						 */
 						moduleC = classLoader.loadClass("de.vennmakermodule."
 								+ modulName + ".Main");
-						setModule((IModule) moduleC.newInstance());
+						setModule((IModule) moduleC.getConstructor().newInstance());
 
-					} catch (ClassNotFoundException e)
+					}catch (ClassNotFoundException e)
 					{
-
 						System.out.println("Module: " + e);
 					} catch (InstantiationException e)
 					{
@@ -2481,6 +2473,18 @@ public class VennMaker extends JFrame
 					} catch (IllegalAccessException e)
 					{
 						System.out.println("Module: " + e);
+					} catch (IllegalArgumentException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (InvocationTargetException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (NoSuchMethodException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (SecurityException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
 					}
 				} catch (MalformedURLException e1)
 				{
@@ -2567,20 +2571,12 @@ public class VennMaker extends JFrame
 
 		loadPlugins();
 
-		// -------------------------
-
-		/*
-		 * Testzeitraum einstellen und das Einschraenkunglevel einstellen.
-		 */
-	   //TestVersion.setTime(VERSION, "2017-01-01 00:00:00.1");
-	   //TestVersion.setLogoON();
-		// TestVersion.setExportOFF();
 
 		try
 		{
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 //			 UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-			 setUIFont (new javax.swing.plaf.FontUIResource("Sans_Serif",Font.PLAIN, 12));
+			 setUIFont (new javax.swing.plaf.FontUIResource("Sans_Serif",Font.PLAIN, (int) VennMakerUIConfig.getFontSize()));
 			 
 		} catch (ClassNotFoundException exn)
 		{
@@ -3288,7 +3284,7 @@ public class VennMaker extends JFrame
 
 	/**
 	 * Aufruf wenn ein neues Projekt / Interview angelegt wird, somit wird
-	 * gew�hrleistet, das VennMaker sich selber wieder als Listener beim
+	 * gewhrleistet, das VennMaker sich selber wieder als Listener beim
 	 * EventProcessor anmeldet.
 	 */
 	public void resetEventListenerIsSetFlag()

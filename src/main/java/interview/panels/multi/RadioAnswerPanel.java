@@ -2,6 +2,7 @@ package interview.panels.multi;
 
 import gui.Messages;
 import gui.VennMaker;
+import gui.utilities.VennMakerUIConfig;
 import interview.panels.SpecialPanel;
 
 import java.awt.BorderLayout;
@@ -30,6 +31,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JEditorPane;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -107,12 +109,13 @@ public class RadioAnswerPanel extends SpecialPanel implements
 		RadioTableModel radioTableModel = new RadioTableModel(actors, aType,
 				answers);
 		radioTable = new JTable(radioTableModel);
-		radioTable.setDefaultRenderer(JRadioButton.class, new ComponentRenderer(
-				this));
-		radioTable.setDefaultEditor(JRadioButton.class, new RadioButtonEditor(
-				new JCheckBox()));
+		radioTable.setDefaultRenderer(JRadioButton.class, new ComponentRenderer(this));
+		radioTable.setDefaultEditor(JRadioButton.class, new RadioButtonEditor(new JCheckBox()));
+
 		WordWrapHeaderRenderer headerRenderer = new WordWrapHeaderRenderer(this);
 		radioTable.getTableHeader().setDefaultRenderer(headerRenderer);
+		radioTable.setRowHeight((int) (VennMakerUIConfig.getFontSize()+15));
+
 		JScrollPane rightScroll = new JScrollPane(radioTable);
 
 		rightPanel.add(radioTable.getTableHeader(), BorderLayout.NORTH);
@@ -132,6 +135,7 @@ public class RadioAnswerPanel extends SpecialPanel implements
 		actorTable.setDefaultRenderer(JLabel.class, new ComponentRenderer(this));
 		actorTable.getTableHeader().setDefaultRenderer(
 				new WordWrapHeaderRenderer(this));
+		actorTable.setRowHeight((int) (VennMakerUIConfig.getFontSize()+15));
 		leftPanel = new JPanel(new BorderLayout());
 		JScrollPane leftScroll = new JScrollPane(actorTable);
 		leftPanel.add(actorTable.getTableHeader(), BorderLayout.NORTH);
@@ -173,8 +177,9 @@ public class RadioAnswerPanel extends SpecialPanel implements
 			for (Akteur a : actors)
 			{
 				ButtonModel bm = answers.get(a).getSelection();
-				if (bm == null)
+				if (bm == null) {
 					return false;
+				}
 				String value = bm.getActionCommand();
 				hm.put(a, value);
 				a.setAttributeValue(aType, n, value);
@@ -182,7 +187,6 @@ public class RadioAnswerPanel extends SpecialPanel implements
 			}
 			oldAttributeValues.put(n, hm);
 		}
-
 		return true;
 	}
 
@@ -398,6 +402,9 @@ class ComponentRenderer implements TableCellRenderer
 		if (parent.getEmptyRows().contains(row))
 			((Component) value).setBackground(new Color(0xffbab0));
 
+
+//		table.setRowHeight(row, (int) (VennMakerUIConfig.getFontSize()+5));
+
 		return (Component) value;
 	}
 }
@@ -498,8 +505,10 @@ class RadioTableModel extends AbstractTableModel
 					rb.setSelected(true);
 				}
 			}
-			if (answer == null)
+			if (answer == null) {
 				answers.put(a, null);
+			}
+			
 			data.put(a, bg);
 		}
 	}
@@ -560,7 +569,7 @@ class WordWrapHeaderRenderer extends JPanel implements TableCellRenderer
 {
 	private static final long	serialVersionUID	= 1L;
 
-	private JEditorPane				tp;
+	private JTextArea				tp;
 
 	public WordWrapHeaderRenderer(final RadioAnswerPanel radioAnswerPanel)
 	{
@@ -576,21 +585,12 @@ class WordWrapHeaderRenderer extends JPanel implements TableCellRenderer
 		gbc.gridwidth = 1;
 		gbc.gridheight = 1;
 		gbc.insets = new Insets(0, 2, 0, 2);
-/*
+
 		tp = new JTextArea();
 		tp.setLineWrap(true);
 		tp.setWrapStyleWord(true);
-		tp.setSize(new Dimension(100, 100));
+		tp.setSize(new Dimension(300, 100));
 		
-		 Font font = new Font("Verdana", Font.BOLD, 12);
-       tp.setFont(font);
-  */
-		tp = new JEditorPane();
-		tp.setEditable(false);
-		tp.setFocusable(false);
-
-		tp.setContentType("text/html");
-
 		tp.addPropertyChangeListener(new PropertyChangeListener()
 		{
 			@Override
@@ -618,7 +618,9 @@ class WordWrapHeaderRenderer extends JPanel implements TableCellRenderer
 	public Component getTableCellRendererComponent(JTable table, Object value,
 			boolean isSelected, boolean hasFocus, int row, int column)
 	{
-		tp.setText("<p>"+(String) value+"</p><small><br></small>");
+//		tp.setText("<p>"+(String) value+"</p><small><br></small>");
+		tp.setText((String) value);
+		tp.setFont(tp.getFont().deriveFont(VennMakerUIConfig.getFontSize()));
 		return this;
 	}
 }

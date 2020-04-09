@@ -14,6 +14,8 @@ package gui.admin;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
+import gui.utilities.VennMakerUIConfig;
+
 /**
  *
  * 
@@ -52,7 +54,7 @@ public class VariableDefinitonDialog extends javax.swing.JDialog {
         jXPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Question"));
-        jPanel4.setFont(jPanel4.getFont().deriveFont((float)10));
+        jPanel4.setFont(jPanel4.getFont().deriveFont(VennMakerUIConfig.getFontSize()));
 
         jXLabel1.setText("Related question ");
 
@@ -77,7 +79,7 @@ public class VariableDefinitonDialog extends javax.swing.JDialog {
         );
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Answer type"));
-        jPanel7.setFont(jPanel7.getFont().deriveFont((float)10));
+        jPanel7.setFont(jPanel7.getFont().deriveFont(VennMakerUIConfig.getFontSize()));
 
         buttonGroup1.add(numericalAnswerButton);
         numericalAnswerButton.setText("Numerical");

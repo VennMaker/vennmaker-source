@@ -2,6 +2,7 @@ package interview.elements.message;
 
 import gui.Messages;
 import gui.VennMaker;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewController;
 import interview.InterviewElementInformation;
 import interview.InterviewLayer;
@@ -161,7 +162,7 @@ public class MaximumAlteriReachedElement extends StandardElement implements
 						+ (VennMaker.getInstance().getProject().getAkteure().size() )
 						+ " / " + this.maximumAlteriSpinner.getValue() + ")");
 		Font f = captionLabel.getFont().deriveFont(Font.BOLD);
-		f = f.deriveFont(f.getSize2D() + 4);
+		f = f.deriveFont(VennMakerUIConfig.getFontSize() + 4);
 		captionLabel.setFont(f);
 		JTextArea ta = new JTextArea();
 		ta.setText(infoField.getText());

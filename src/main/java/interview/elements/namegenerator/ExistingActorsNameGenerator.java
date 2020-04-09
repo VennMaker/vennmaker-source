@@ -6,6 +6,7 @@ import gui.configdialog.ConfigDialog;
 import gui.configdialog.ConfigDialogTempCache;
 import gui.configdialog.individual.EditIndividualAttributeTypeDialog;
 import gui.configdialog.settings.SettingAddAttributeType;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewController;
 import interview.InterviewElementInformation;
 import interview.InterviewLayer;
@@ -259,8 +260,12 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 			@Override
 			public void valueChanged(ListSelectionEvent arg0)
 			{
-				if (selectedActorsList.getSelectedIndex() >= 0)
+				if (selectedActorsList.getSelectedIndex() >= 0) {
 					alreadyNamedList.clearSelection();
+				}
+								
+				updateNumberActors();
+				updateNumberActorsText();
 			}
 		});
 
@@ -270,8 +275,12 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 			@Override
 			public void valueChanged(ListSelectionEvent arg0)
 			{
-				if (alreadyNamedList.getSelectedIndex() >= 0)
+				if (alreadyNamedList.getSelectedIndex() >= 0) {
 					selectedActorsList.clearSelection();
+				}
+
+				updateNumberActors();
+				updateNumberActorsText();
 			}
 		});
 
@@ -284,7 +293,7 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 		questionArea.setWrapStyleWord(true);
 		questionArea.setBackground(controllerDialog.getBackground());
 		Font f = questionArea.getFont().deriveFont(Font.BOLD);
-		questionArea.setFont(f.deriveFont((float) (f.getSize() + 4)));
+		questionArea.setFont(f.deriveFont(VennMakerUIConfig.getFontSize() + 4f));
 
 		JScrollPane questionAreaPane = new JScrollPane(questionArea);
 		questionAreaPane.setFocusable(false);
@@ -439,6 +448,21 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 
 		return controllerDialog;
 	}
+	
+	
+	private boolean isMaximum() {
+		int maxActors = (Integer) maxActorSpinner.getValue();
+
+		if (numberOfAllActors + 1 > maxActors && maxActors != 0)
+		{
+			JOptionPane
+					.showMessageDialog(
+							VennMaker.getInstance(),
+							Messages.getString("NameGenerator.Define") + maxActors + Messages.getString("NameGenerator.Actors")); //$NON-NLS-1$ //$NON-NLS-2$
+			return true;
+		}
+		return false;
+	}
 
 	/**
 	 * This Routine gets started if the user trys to add a new actor. It tests if
@@ -454,7 +478,7 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 					Messages.getString("NameGenerator.InsertName")); //$NON-NLS-1$
 			return;
 		}
-		else if (numberOfAllActors + 1 > maxActors && maxActors != 0)
+		else if (isMaximum() == true)
 		{
 			JOptionPane
 					.showMessageDialog(
@@ -885,7 +909,7 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 			JOptionPane
 					.showMessageDialog(
 							VennMaker.getInstance(),
-							Messages.getString("NameGenerator.Only") + maxActors + Messages.getString("NameGenerator.ActorsAllowed") + (numberOfAllActors - maxActors) + Messages.getString("NameGenerator.Actors2")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+							Messages.getString("NameGenerator.Only") + " " + maxActors + Messages.getString("NameGenerator.ActorsAllowed") + (numberOfAllActors - maxActors) + Messages.getString("NameGenerator.Actors2")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
 			return false;
 		}
@@ -1002,9 +1026,19 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 	private void updateNumberActorsText()
 	{
 		if (this.numberOfAllActors >= 0)
+		{
+			String textWarning = "";			
+			int maxActors = (Integer) maxActorSpinner.getValue();
+			if ((maxActors > 0 ) && (this.numberOfAllActors > maxActors)) 
+			{
+				textWarning = "!";
+			}
+
 			numberAllActors.setText(""
 					+ Messages.getString("NameGenerator.Alteri") + ": "
-					+ this.numberOfAllActors);
+					+ (this.numberOfAllActors + alreadyNamedListModel.size() )
+					+ " ("+this.numberOfAllActors+textWarning+")");
+		}
 		/*
 		 * if ((this.numberOfAllActors > VennMaker.getInstance().getProject()
 		 * .getMaxNumberActors()) &&
@@ -1017,10 +1051,10 @@ public class ExistingActorsNameGenerator extends StandardElement implements
 
 	private void updateNumberActors()
 	{
-		Vector<Akteur> currentActors = VennMaker.getInstance().getProject()
-				.getAkteure();
+		Vector<Akteur> currentActors = VennMaker.getInstance().getProject().getAkteure();
 
-		this.numberOfAllActors = currentActors.size() + actorsToCreate.size();
+//		this.numberOfAllActors = currentActors.size() + actorsToCreate.size();
+		this.numberOfAllActors = selectedActorsListModel.size();
 
 		if (currentActors.contains(VennMaker.getInstance().getProject().getEgo()))
 			this.numberOfAllActors--;

@@ -19,6 +19,7 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Vector;
 
 import javax.swing.ImageIcon;
@@ -409,7 +410,7 @@ System.out.println("Werte "+obj.toString());
 
 	private void setFilterNow()
 	{
-System.out.println("InterviewDialog: setFilterNow():"+caller);
+System.out.println("InterviewDialog: setFilterNow():"+caller+" filter: "+this.filter);
 		String[] myFilter = this.filter.split(";"); //$NON-NLS-1$
 		ArrayList<Integer> filterIndex = caller.getFilterIndex();
 		Vector<AttributeType> attributeVector = VennMaker.getInstance()
@@ -614,8 +615,8 @@ System.out.println("InterviewFilterDialog: setNewFilter");
 
 		/**
 		 * speichert die Voraussetzungen zum Filtern - alle Filtereinstellungen,
-		 * die mit AND verkn�pft sind, erhalten die gleiche Integer-Kennzahl. OR -
-		 * Verkn�pfungen werden durch unterschiedliche Integer-Kennzahlen
+		 * die mit AND verknuepft sind, erhalten die gleiche Integer-Kennzahl. OR -
+		 * Verknuepfungen werden durch unterschiedliche Integer-Kennzahlen
 		 * gekennzeichnet
 		 */
 		private HashMap<Integer, Vector<Filterparameter>>	filters			= new HashMap<Integer, Vector<Filterparameter>>();
@@ -635,6 +636,7 @@ System.out.println("InterviewFilterDialog: setNewFilter");
 		{
 			this.filter = f;
 			filterIndex = new ArrayList<Integer>();
+System.out.println("MySearchListener: "+f);			
 		}
 
 		@Override
@@ -813,6 +815,66 @@ System.out.println("InterviewFilterDialog: setNewFilter");
 			return false;
 		}
 	}
+	
+	/**
+	 * 
+	 * @param Akteur a
+	 * @param String attributeName
+	 * @param Filterarameter fp
+	 * @return boolean
+	 */
+	private Boolean checkExpressionString(Akteur a, String attributeName, Filterparameter fp)
+	{		
+		AttributeType aName = null;
+		
+		for (final AttributeType attributeType : VennMaker.getInstance().getProject().getAttributeTypes()) {
+
+			if (attributeType.getType().equals("ACTOR"))
+			{
+				if (attributeType.getLabel().equals(attributeName)) {
+					aName = attributeType;
+				}
+			}
+		}
+		
+		Object value = currentActor.getAttributeValue(aName, network);
+
+		// if (fp.value == null) fp.value = "";
+		if (value == null)
+			value = "";
+
+		switch (fp.compareDirection)
+		{
+		// TODO: Comparator schreiben, um Vergleiche zu realisieren.
+			case LOWER:
+				if (compare(value, fp.value, fp.at) < 0)
+					return true;
+				break;
+			case LOWER_EQUALS:
+				if (compare(value, fp.value, fp.at) <= 0)
+					return true;
+				break;
+			case EQUALS:
+				if (compare(value, fp.value, fp.at) == 0)
+					return true;
+				break;
+			case NOT_EQUALS:
+				if (compare(value, fp.value, fp.at) != 0)
+					return true;
+				break;
+			case HIGHER_EQUALS:
+				if (compare(value, fp.value, fp.at) >= 0)
+					return true;
+				break;
+			case HIGHER:
+				if (compare(value, fp.value, fp.at) > 0)
+					return true;
+				break;
+			default:
+				return false;
+		}
+		return false;
+	}
 
 	public List<Akteur> getActors()
 	{
@@ -822,7 +884,56 @@ System.out.println("InterviewFilterDialog: setNewFilter");
 	System.out.println("getActors: NIX");
 			return VennMaker.getInstance().getProject().getAkteure();
 		}
-		msl.actionPerformed(null);
+		
+		
+//		msl.actionPerformed(null);
+		System.out.println("Neue Filterfunktion....");
+		
+		String[] myFilter = this.filter.split(";");
+		
+		for (Akteur actor : akteure)
+		{
+			currentActor = actor;
+			Filterparameter fp = new Filterparameter();	
+			
+			if (myFilter[1].equals("smaller") ) {
+				fp.compareDirection = 0;
+			}
+
+			if (myFilter[1].equals("smaller	equal") ) {
+				fp.compareDirection = 1;
+			}
+			
+			if (myFilter[1].equals("equal") ) {
+				fp.compareDirection = 2;
+			}
+			
+			if (myFilter[1].equals("higher equal") ) {
+				fp.compareDirection = 3;
+			}
+			
+			if (myFilter[1].equals("higher") ) {
+				fp.compareDirection = 4;
+			}
+			
+			fp.value = myFilter[2];
+
+			for (final AttributeType attributeType : VennMaker.getInstance().getProject().getAttributeTypes()) {
+
+				if (attributeType.getType().equals("ACTOR"))
+				{
+					if (attributeType.getLabel().equals(myFilter[0])) {
+						fp.at = attributeType;
+						break;
+					}
+				}
+			}
+			
+			if (checkExpressionString(currentActor, myFilter[0], fp )) {
+				this.results.add(currentActor);
+			}			
+		}
+		
 		return this.results;
 	}
 

@@ -9,6 +9,7 @@ import gui.configdialog.ConfigDialog;
 import gui.configdialog.ConfigDialogTempCache;
 import gui.configdialog.individual.EditIndividualAttributeTypeDialog;
 import gui.configdialog.settings.SettingAddAttributeType;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewController;
 import interview.InterviewElementInformation;
 import interview.InterviewLayer;
@@ -165,7 +166,7 @@ public class NameGenerator extends StandardElement implements UndoElement,
 		questionArea.setLineWrap(true);
 		questionArea.setWrapStyleWord(true);
 		Font f = questionArea.getFont().deriveFont(Font.BOLD);
-		questionArea.setFont(f.deriveFont((float) (f.getSize() + 4)));
+		questionArea.setFont(f.deriveFont(VennMakerUIConfig.getFontSize() + 4f));
 
 		JScrollPane questionAreaPane = new JScrollPane(questionArea);
 		questionAreaPane.setFocusable(false);

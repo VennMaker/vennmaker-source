@@ -9,13 +9,13 @@ import gui.configdialog.elements.CDialogRelationSizeTable;
 import java.util.HashMap;
 
 /**
- * Erlaubt Laden von SaveElements von alten ConfigDialogen in überarbeitete
+ * Erlaubt Laden von SaveElements von alten ConfigDialogen in berarbeitete
  * Dialoge
  * 
  * Einfache HashMap zur Umwandlung von alten ConfigDialog-Namen zu neuen.
  * 
- * TODO: Eventuelle Überarbeitung durch SaveElement Typ mit passendem Dialog,
- * reduziert jedoch Flexibilität
+ * TODO: Eventuelle berarbeitung durch SaveElement Typ mit passendem Dialog,
+ * reduziert jedoch Flexibilitt
  * 
  * 
  * 

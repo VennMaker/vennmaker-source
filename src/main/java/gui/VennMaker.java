@@ -116,6 +116,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -338,8 +339,8 @@ public class VennMaker extends JFrame
 	 * Infotext angezeigt wird.
 	 */
 	private JPanel						nextPanel;
-	public static String				VERSION					= "2.0.2";							//$NON-NLS-1$
-	public static int					internVERSION			= 2000002;										// e.g.
+	public static String				VERSION					= "2.0.3";							//$NON-NLS-1$
+	public static int					internVERSION			= 2000003;										// e.g.
 																																			// 1.4.1.11
 
 	public static String				REVISION					= "";											//$NON-NLS-1$
@@ -2461,11 +2462,10 @@ public class VennMaker extends JFrame
 						 */
 						moduleC = classLoader.loadClass("de.vennmakermodule."
 								+ modulName + ".Main");
-						setModule((IModule) moduleC.newInstance());
+						setModule((IModule) moduleC.getConstructor().newInstance());
 
-					} catch (ClassNotFoundException e)
+					}catch (ClassNotFoundException e)
 					{
-
 						System.out.println("Module: " + e);
 					} catch (InstantiationException e)
 					{
@@ -2473,6 +2473,18 @@ public class VennMaker extends JFrame
 					} catch (IllegalAccessException e)
 					{
 						System.out.println("Module: " + e);
+					} catch (IllegalArgumentException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (InvocationTargetException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (NoSuchMethodException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (SecurityException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
 					}
 				} catch (MalformedURLException e1)
 				{

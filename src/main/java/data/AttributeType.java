@@ -364,7 +364,7 @@ public class AttributeType implements Serializable, Transferable, Cloneable
 	{
 		this.defaultValue = a.defaultValue;
 		this.description = a.description;
-		// this.id = a.id; //id nicht �bernehmen (UNIQUE)
+		// this.id = a.id; //id nicht uebernehmen (UNIQUE)
 		this.predefinedValues = a.predefinedValues;
 		this.label = a.label;
 		this.question = a.question;

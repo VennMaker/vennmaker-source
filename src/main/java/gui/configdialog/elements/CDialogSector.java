@@ -141,9 +141,10 @@ public class CDialogSector extends ConfigDialogElement
 					if (executeActionListener)
 					{
 						int index = cb.getSelectedIndex();
-						if (index >= 0)
+						
+						if (index >= 1)
 						{
-							sectorAttrib = aTypes.get(index);
+							sectorAttrib = aTypes.get(index-1);
 							editAttributeButton.setEnabled(true);
 						}
 						else
@@ -252,7 +253,7 @@ public class CDialogSector extends ConfigDialogElement
 			cm.getColumn(2).setCellRenderer(new ColorButtonCellRenderer());
 			if (cb.getSelectedIndex() > 0)
 			{
-				sectorAttrib = aTypes.get(cb.getSelectedIndex());
+				sectorAttrib = aTypes.get(cb.getSelectedIndex()-1);
 				initializeTmpSectors();
 			}
 
@@ -450,27 +451,34 @@ public class CDialogSector extends ConfigDialogElement
 	private void fillComboBox(JComboBox<String> cb,
 			AttributeType selectedAttribute)
 	{
-		if (cb == null)
+		if (cb == null) {
 			return;
+		}
+		
 		cb.removeAllItems();
 
 		aTypes = VennMaker.getInstance().getProject()
 				.getAttributeTypesDiscrete("ACTOR");
 
 		// cb.addItem("");
+		cb.addItem(ConfigDialog.getElementCaption(""));
 
 		for (int i = 0; i < aTypes.size(); i++)
 		{
+			AttributeType a = aTypes.get(i);
 			cb.addItem(ConfigDialog.getElementCaption(aTypes.get(i).getLabel()));
-			// if (a.equals(selectedAttribute))
-			// cb.setSelectedIndex(cb.getItemCount() - 1);
+			if (a.equals(selectedAttribute)) {
+				cb.setSelectedIndex(cb.getItemCount() - 1);
+			}
 		}
 
-		if (selectedAttribute != null)
-			cb.setSelectedItem(ConfigDialog.getElementCaption(selectedAttribute
-					.getLabel()));
-		else {
-			// cb.setSelectedItem("");
+		if (selectedAttribute != null) 
+		{
+			cb.setSelectedItem(ConfigDialog.getElementCaption(selectedAttribute.getLabel()));
+		}
+		else 
+		{
+			cb.setSelectedItem("");
 			if (cb.getItemCount() > 0) {
 				cb.setSelectedIndex(0);
 				cb.setSelectedItem(cb.getItemAt(0));
@@ -505,16 +513,15 @@ public class CDialogSector extends ConfigDialogElement
 			/* first run (Cache empty) - get sectors from backgroundinfo */
 			if ((tmpSectorCache.size() == 0) && (sectorAttrib != null))
 			{
-
 				BackgroundInfo bginfo = net.getHintergrund();
 				if (sectorAttrib.equals(bginfo.getSectorAttribute()))
-				{					
+				{
 					tmpSectorCache.put(sectorAttrib, new ArrayList<SectorInfo>());
 					for (int i = 0; i < vals.length; i++)
 					{
 						SectorInfo toCopy = bginfo.getSector(i);
 						SectorInfo si = new BackgroundInfo().new SectorInfo();
-						si.label = vals[i].toString();
+						si.label = vals[i].toString();				
 						si.sectorColor = toCopy.sectorColor;
 						si.width = toCopy.width;
 						si.off = toCopy.off;						
@@ -525,7 +532,7 @@ public class CDialogSector extends ConfigDialogElement
 			
 			if (!tmpSectorCache.containsKey(sectorAttrib)
 					|| tmpSectorCache.get(sectorAttrib).size() != vals.length)
-			{
+			{				
 				tmpSectorCache.put(sectorAttrib, new ArrayList<SectorInfo>());
 				Color[] colors = BackgroundInfo.getStandardColors();
 				for (int i = 0; i < vals.length; i++)
@@ -622,22 +629,22 @@ public class CDialogSector extends ConfigDialogElement
 		/* FakeSectors to check, whether the current settings are valid or not */
 		List<SectorInfo> fakeSectors = tmpSectorCache.get(sectorAttrib);
 		if (fakeSectors != null)
-		{
-			if (fakeSectors.size() == 0)
-				tmpSectors.clear();
+		{			
+			if (fakeSectors.size() == 0) {
+				tmpSectors.clear();		
+			}
 
 			double alpha = (100 - sectorTransparency.getValue()) / 100.0;
-			ConfigDialogSetting s = new SettingSector(net, tmpSectors,
-					sectorAttrib, alpha);
+			ConfigDialogSetting s = new SettingSector(net, tmpSectors, sectorAttrib, alpha);
 
 			return s;
 		}
 
 		/* if no attribute is chosen, return empty sectorlist to reset sectors */
-		if (sectorAttrib == null)
+		if (sectorAttrib == null) {
 			return new SettingSector(net, new Vector<SectorInfo>(), null,
 					(100 - sectorTransparency.getValue()) / 100.0);
-
+		}
 		return null;
 	}
 

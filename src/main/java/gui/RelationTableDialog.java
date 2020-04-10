@@ -44,6 +44,7 @@ import events.AddRelationEvent;
 import events.ComplexEvent;
 import events.NewActorEvent;
 import events.RemoveRelationEvent;
+import gui.utilities.VennMakerUIConfig;
 
 /**
  * 
@@ -248,6 +249,8 @@ public class RelationTableDialog extends JDialog implements ActionListener
 		relationTable.getSelectionModel().setSelectionMode(
 				ListSelectionModel.SINGLE_SELECTION);
 
+		relationTable.setRowHeight((int) (VennMakerUIConfig.getFontSize()+15)); 
+		
 		relationTable.addMouseListener(new AttributeMouseListener(
 				INDEX_RELATION_GROUP, INDEX_RELATION_GROUP));
 

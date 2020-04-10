@@ -1099,7 +1099,7 @@ public class CDialogActorImage extends ConfigDialogElement implements
 						File dest = new File(getIconPath() + src[i].getName());
 
 						// falls das neue Icon aus "jpg" oder "png" Datei
-						// erzeugt wird,wird aus Performance Gr�nden kleinere
+						// erzeugt wird,wird aus Performance Grnden kleinere
 						// Version
 						// gespeichert
 						String name = src[i].getName().toLowerCase();

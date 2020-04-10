@@ -8,7 +8,7 @@ package gui.utilities;
 public class StringUtilities
 {
 	/**
-	 * Maximale Länge für Strings im TaskPane 
+	 * Maximale Lnge fr Strings im TaskPane 
 	 */
 	public static final int	MAX_TASK_PANE_LABEL_LENGTH	= 14;
 	

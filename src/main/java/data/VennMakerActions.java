@@ -16,6 +16,7 @@ import gui.OpenFileDialog;
 import gui.SelectInterviewDialog;
 import gui.TestVersion;
 import gui.VennMaker;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewController;
 import interview.InterviewLayer;
 

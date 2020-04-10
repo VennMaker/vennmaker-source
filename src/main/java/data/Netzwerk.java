@@ -1907,7 +1907,7 @@ if (this.relationSizeVisualizer != null)
 
 			float egoSpace = 0;
 
-			/* Winkel des Akteurs zum Ursprung des Kreises (PI = 180�)*/
+			/* Winkel des Akteurs zum Ursprung des Kreises (PI = 180)*/
 			double sektor = Math.acos(vektorX);
 			/* PI + (PI - sektor) um vollstaendigen Kreis abzubilden */
 			if (actorPosY > y_mid)

@@ -37,6 +37,7 @@ import events.ActorEvent;
 import events.ActorInNetworkEvent;
 import events.VennMakerEvent;
 import export.ExportCSV;
+import gui.utilities.VennMakerUIConfig;
 
 /**
  * Dialog to show Statistics about the actors
@@ -438,6 +439,7 @@ public class ViewStatisticDialog extends JDialog
 				new String[] {
 						Messages.getString("ViewStatisticDialog.6"), Messages.getString("ViewStatisticDialog.7") }); //$NON-NLS-1$ //$NON-NLS-2$
 		myTable.setModel(dtm);
+		myTable.setRowHeight((int) (VennMakerUIConfig.getFontSize()+15)); 
 		dtm.fireTableDataChanged();
 		dtm.fireTableStructureChanged();
 

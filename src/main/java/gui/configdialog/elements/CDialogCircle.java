@@ -126,9 +126,9 @@ public class CDialogCircle extends ConfigDialogElement
 					if (runActionListener)
 					{
 						int index = cb.getSelectedIndex();
-						if (index >= 0)
+						if (index >= 1)
 						{
-							AttributeType a = aTypes.get(index);
+							AttributeType a = aTypes.get(index-1);
 							tModel.setSelectedAttribute(a, tModel.isAsc());
 							circleAttrib = a;
 							editAttributeButton.setEnabled(true);
@@ -303,7 +303,7 @@ public class CDialogCircle extends ConfigDialogElement
 		aTypes = VennMaker.getInstance().getProject()
 				.getAttributeTypesDiscrete(getType);
 
-		// cb.addItem("");
+		cb.addItem(ConfigDialog.getElementCaption(""));
 
 		for (int i = 0; i < aTypes.size(); i++)
 		{
@@ -358,8 +358,7 @@ public class CDialogCircle extends ConfigDialogElement
 	public ConfigDialogSetting getFinalSetting()
 	{
 		refreshBeforeGetDialog();
-		ConfigDialogSetting s = new SettingCircle(circleAttrib, tModel.isAsc(),
-				net);
+		ConfigDialogSetting s = new SettingCircle(circleAttrib, tModel.isAsc(), net);
 		return s;
 	}
 

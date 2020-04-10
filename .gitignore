@@ -2,3 +2,4 @@
 /target/
 # ignore log files
 *.log
+/vennmakerfontsize.txt

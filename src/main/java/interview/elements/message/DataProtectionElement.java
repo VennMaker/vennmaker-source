@@ -1,6 +1,7 @@
 package interview.elements.message;
 
 import gui.Messages;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewElementInformation;
 import interview.InterviewLayer;
 import interview.categories.IECategory_MetaElement;
@@ -114,7 +115,7 @@ public class DataProtectionElement extends InterviewElement implements IECategor
 		
 		JLabel captionLabel = new JLabel(Messages.getString("DataProtectionElement.CaptionLabel"));
 		Font f = captionLabel.getFont().deriveFont(Font.BOLD);
-		f = f.deriveFont(f.getSize2D()+4);
+		f = f.deriveFont(VennMakerUIConfig.getFontSize()+4);
 		captionLabel.setFont(f);
 		JTextArea ta = new JTextArea();
 		ta.setText(infoArea.getText());
@@ -149,7 +150,7 @@ public class DataProtectionElement extends InterviewElement implements IECategor
 		{
 			JLabel instituteLabel = new JLabel(instituteField.getText());
 			f = instituteLabel.getFont().deriveFont(Font.ITALIC);
-			f = f.deriveFont(f.getSize2D()+6);
+			f = f.deriveFont(VennMakerUIConfig.getFontSize()+6);
 			instituteLabel.setFont(f);
 			
 			c = new GridBagConstraints();

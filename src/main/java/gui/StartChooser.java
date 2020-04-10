@@ -287,96 +287,98 @@ public class StartChooser extends JDialog implements ActionListener,
 
 		// -------------------------------------------- Information bei alter Java
 		// Version ------------------------------------------------
+		System.out.println(System.getProperties().toString());
+		String s = System.getProperty("java.vm.specification.version");
+		System.out.println("Java VM specification version: "+s);
 
-		String s = System.getProperty("java.version");
-		String release = s.substring(2, 3);
-		System.out.println("Java version: "+s);
-		double ver = 0; 
-		boolean wrongVersion = true;
-		
-		try {
-			ver = Double.parseDouble(s);
-			if (ver >= 1.8) {
-				wrongVersion = false;
-			}
-		} catch(NumberFormatException e) {
-			release = s.substring(0, 2);
-
-			try {
-				ver = Double.parseDouble(release);
-				if (ver >= 10) {
-					wrongVersion = false;
-				}
-			} catch(NumberFormatException f) {
-			}
-
+		if (s != null && s.length() >=3 ) {
+		    	String release = s.substring(2, 3);
+		    	double ver = 0; 
+        		boolean wrongVersion = true;
+        		
+        		try {
+        			ver = Double.parseDouble(s);
+        			if (ver >= 1.8) {
+        				wrongVersion = false;
+        			}
+        		} catch(NumberFormatException e) {
+        			release = s.substring(0, 2);
+        
+        			try {
+        				ver = Double.parseDouble(release);
+        				if (ver >= 10) {
+        					wrongVersion = false;
+        				}
+        			} catch(NumberFormatException f) {
+        			}
+        
+        		}
+        
+        		if (wrongVersion == true)
+        		{
+        			JTextArea taJavaVersion = new JTextArea(
+        					"You are using outdated Java Version "
+        							+ release
+        							+ ".\n"
+        							+ "This can probably cause problems loading VennMaker projects.\n"
+        							+ "Please use the following link to update Java:");
+        
+        			taJavaVersion.setEditable(false);
+        			taJavaVersion.setLineWrap(true);
+        			taJavaVersion.setWrapStyleWord(true);
+        			taJavaVersion.setBackground(this.getBackground());
+        			taJavaVersion.setForeground(Color.red);
+        			taJavaVersion.setPreferredSize(new Dimension(buttonWidthDouble, 60));
+        
+        			GridBagConstraints g = getStandardConstraints(1, zeile,
+        					buttonWidthDouble, 1);
+        			g.insets.top += 10;
+        			g.insets.bottom = 0;
+        			add(taJavaVersion, g);
+        
+        			final JLabel linkLabel = new JLabel("http://www.java.com/download");
+        			linkLabel.setForeground(Color.blue);
+        			linkLabel.addMouseListener(new MouseAdapter()
+        			{
+        				@Override
+        				public void mouseClicked(MouseEvent e)
+        				{
+        					try
+        					{
+        						URI link = new URI("http://www.java.com/download");
+        						Desktop.getDesktop().browse(link);
+        					} catch (Exception ex)
+        					{
+        						ex.printStackTrace();
+        					}
+        				}
+        
+        				@Override
+        				public void mouseEntered(MouseEvent e)
+        				{
+        					linkLabel.setCursor(Cursor
+        							.getPredefinedCursor(Cursor.HAND_CURSOR));
+        				}
+        
+        				@Override
+        				public void mouseExited(MouseEvent e)
+        				{
+        					linkLabel.setCursor(Cursor
+        							.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+        				}
+        			});
+        
+        			zeile++;
+        			linkLabel.setOpaque(true);
+        			gbc = new GridBagConstraints();
+        			gbc.gridx = 1;
+        			gbc.gridy = zeile;
+        			gbc.fill = GridBagConstraints.NONE;
+        			gbc.insets = new Insets(HEIGHT, 23, HEIGHT, 10);
+        			add(linkLabel, gbc);
+        		}
+        		// --------------------------------------------------------------------------------------------------------------------------------
 		}
-
-		if (wrongVersion == true)
-		{
-			JTextArea taJavaVersion = new JTextArea(
-					"You are using outdated Java Version "
-							+ release
-							+ ".\n"
-							+ "This can probably cause problems loading VennMaker projects.\n"
-							+ "Please use the following link to update Java:");
-
-			taJavaVersion.setEditable(false);
-			taJavaVersion.setLineWrap(true);
-			taJavaVersion.setWrapStyleWord(true);
-			taJavaVersion.setBackground(this.getBackground());
-			taJavaVersion.setForeground(Color.red);
-			taJavaVersion.setPreferredSize(new Dimension(buttonWidthDouble, 60));
-
-			GridBagConstraints g = getStandardConstraints(1, zeile,
-					buttonWidthDouble, 1);
-			g.insets.top += 10;
-			g.insets.bottom = 0;
-			add(taJavaVersion, g);
-
-			final JLabel linkLabel = new JLabel("http://www.java.com/download");
-			linkLabel.setForeground(Color.blue);
-			linkLabel.addMouseListener(new MouseAdapter()
-			{
-				@Override
-				public void mouseClicked(MouseEvent e)
-				{
-					try
-					{
-						URI link = new URI("http://www.java.com/download");
-						Desktop.getDesktop().browse(link);
-					} catch (Exception ex)
-					{
-						ex.printStackTrace();
-					}
-				}
-
-				@Override
-				public void mouseEntered(MouseEvent e)
-				{
-					linkLabel.setCursor(Cursor
-							.getPredefinedCursor(Cursor.HAND_CURSOR));
-				}
-
-				@Override
-				public void mouseExited(MouseEvent e)
-				{
-					linkLabel.setCursor(Cursor
-							.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-				}
-			});
-
-			zeile++;
-			linkLabel.setOpaque(true);
-			gbc = new GridBagConstraints();
-			gbc.gridx = 1;
-			gbc.gridy = zeile;
-			gbc.fill = GridBagConstraints.NONE;
-			gbc.insets = new Insets(HEIGHT, 23, HEIGHT, 10);
-			add(linkLabel, gbc);
-		}
-		// --------------------------------------------------------------------------------------------------------------------------------
-
 		zeile = 3;
 
 		JButton openVmpButton = new JButton(

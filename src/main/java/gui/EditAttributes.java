@@ -331,7 +331,7 @@ public class EditAttributes extends JDialog implements ActionListener
 			if (vals == null || vals.length <= 0)
 			{
 				/*
-				 * Intern bereits gesichert gegen �berschreiben beim editieren,
+				 * Intern bereits gesichert gegen berschreiben beim editieren,
 				 * setze Feld leer, falls gecancelt. Wird alte wert wieder
 				 * hergestellt
 				 */

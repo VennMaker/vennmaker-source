@@ -3,6 +3,7 @@ package interview.elements;
 import gui.Messages;
 import gui.VennMaker;
 import gui.configdialog.ConfigDialog;
+import gui.utilities.VennMakerUIConfig;
 import interview.InterviewElementInformation;
 import interview.InterviewLayer;
 import interview.UpdateListener;
@@ -141,7 +142,7 @@ public class StandardElement extends InterviewElement implements
 			String q = questions.keySet().iterator().next();
 			JLabel lblQuestion = new JLabel("<html>" + q + "</html>");
 			lblQuestion.setFont(lblQuestion.getFont().deriveFont(Font.BOLD)
-					.deriveFont(lblQuestion.getFont().getSize2D() + 4));
+					.deriveFont(VennMakerUIConfig.getFontSize() + 4));
 			g.gridx = x;
 			g.gridy = y;
 			g.gridheight = 1;
@@ -397,14 +398,19 @@ public class StandardElement extends InterviewElement implements
 		Integer[] filterIndex = null;
 		String filter = null;
 
-		if (this.fSelector != null && this.fSelector.getFilterIndex() != null)
+//		if (this.fSelector != null && this.fSelector.getFilterIndex() != null)
+//		{
+//			filterIndex = new Integer[this.fSelector.getFilterIndex().size()];
+//			filterIndex = this.fSelector.getFilterIndex().toArray(filterIndex);
+//			filter = this.fSelector.getFilter();
+//		}
+		
+		if (this.fSelector != null && this.fSelector.getFilter() != null)
 		{
-			filterIndex = new Integer[this.fSelector.getFilterIndex().size()];
-
-			filterIndex = this.fSelector.getFilterIndex().toArray(filterIndex);
 			filter = this.fSelector.getFilter();
 		}
-
+		
+System.out.println("jjjjjjjjjjjjjJ: "+this.fSelector+" index: "+this.fSelector.getFilterIndex()+" filter: "+this.fSelector.getFilter());
 		InputElementInformation elem = new InputElementInformation(
 				nSelector.getName(), filter, filterIndex,
 				aSelector.getAttributesAndQuestions(), nSelector.getInfo());
@@ -435,11 +441,12 @@ public class StandardElement extends InterviewElement implements
 		nSelector.setName(info.getElementName());
 		nSelector.setInfo(info.getInfo());
 	System.out.println("StandardElement: setElementInfo()");
-		if (info.getFilter() != null && info.getFilterIndex() != null)
+//		if (info.getFilter() != null && info.getFilterIndex() != null)
+		if (info.getFilter() != null)
+
 		{
 			this.fSelector.setFilter(info.getFilter());
-			this.fSelector.setFilterIndex(new ArrayList<Integer>(Arrays.asList(info
-					.getFilterIndex())));	
+//			this.fSelector.setFilterIndex(new ArrayList<Integer>(Arrays.asList(info.getFilterIndex())));
 		}
 
 		setElementNameInTree(nSelector.getName());
@@ -473,18 +480,14 @@ if (info.getAttributesAndQuestions() != null)
 	@Override
 	public boolean shouldBeSkipped()
 	{
-System.out.println("StandardElement shouldBeSkipped A");
 		if (this.fSelector != null)
 		{
-System.out.println("StandardElement shouldBeSkipped B");			
 			List<Akteur> filteredActors = this.fSelector.getFilteredActors();
 			if (filteredActors == null || filteredActors.size() <= 0)
 			{
-System.out.println("StandardElement shouldBeSkipped C");				
 				return true;
 			}
 		}
-System.out.println("StandardElement shouldBeSkipped D");		
 		return false;
 	}
 

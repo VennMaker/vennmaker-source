@@ -69,8 +69,9 @@ public class ConfigDialogTempCache
 		for (ConfigDialogElement e : activeElements)
 		{
 			ConfigDialogSetting s = e.getFinalSetting();
-			if (s != null)
+			if (s != null) {
 				settings.add(s);
+			}
 		}
 		// Alle Settings der Reihe nach ausfuehren
 		for (ConfigDialogSetting s : settings)

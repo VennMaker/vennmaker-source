@@ -55,6 +55,7 @@ import events.NewActorEvent;
 import events.RenameActorEvent;
 import events.SetAttributeEvent;
 import files.FileOperations;
+import gui.utilities.VennMakerUIConfig;
 
 /**
  * 
@@ -296,6 +297,10 @@ public class ActorTableDialog extends JDialog implements AdjustmentListener,
 
 		attributeValueTable.addMouseListener(new AttributeMouseListener(1,
 				attributeValueTable.getColumnCount() - 1));
+		
+		actorNamesTable.setRowHeight((int) (VennMakerUIConfig.getFontSize()+15)); 
+		attributeValueTable.setRowHeight((int) (VennMakerUIConfig.getFontSize()+15));
+ 		
 
 		actorNamesTable.getSelectionModel().addListSelectionListener(
 				new ListSelectionListener()
@@ -606,8 +611,6 @@ public class ActorTableDialog extends JDialog implements AdjustmentListener,
 	 * for the real table models (ActorsNameTableModel &
 	 * AttributeValueTableModel)
 	 * 
- * 
-	 * 
 	 */
 	abstract class ActorDataBaseModel extends DefaultTableModel
 	{
@@ -710,8 +713,8 @@ public class ActorTableDialog extends JDialog implements AdjustmentListener,
 	}
 
 	/**
-	 * Editor f�r editierbare Zellen in der ActorTable, um zus�tzliche
-	 * funktionalit�t zu implementieren.
+	 * Editor fuer editierbare Zellen in der ActorTable, um zusuetzliche
+	 * funktionalitaet zu implementieren.
 	 */
 	class ActorTableCellEditor extends DefaultCellEditor
 	{
@@ -745,6 +748,7 @@ public class ActorTableDialog extends JDialog implements AdjustmentListener,
 
 				}
 			}
+			
 			return editorComponent;
 			// return super.getTableCellEditorComponent(table, value, isSelected,
 			// row, column);

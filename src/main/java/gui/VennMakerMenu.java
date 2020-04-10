@@ -551,6 +551,14 @@ public class VennMakerMenu implements ActionListener, ItemListener, MenuListener
 		aboutUpdate.setActionCommand("aboutupdate");
 		aboutUpdate.addActionListener(this);
 		menu.add(aboutUpdate);
+		
+		// -------Change font size --------		
+		JMenuItem changeFontSize = new JMenuItem(
+				Messages.getString("VennMaker.Change_FontSize")); //$NON-NLS-1$
+
+		changeFontSize.setActionCommand("changefontsize");
+		changeFontSize.addActionListener(this);
+		menu.add(changeFontSize);
 
 		// -------Team info --------
 		icon = SvgBatikResizableIcon

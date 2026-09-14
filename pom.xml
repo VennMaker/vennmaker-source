@@ -1,124 +1,127 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-<modelVersion>4.0.0</modelVersion>
-  
-  
+  <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.vennmaker</groupId>
   <artifactId>vennmaker</artifactId>
   <version>2.0.1-SNAPSHOT</version>
- 
+
   <name>VennMaker</name>
-  <url>http://maven.apache.org</url>
-  
+  <url>http://www.vennmaker.com</url>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
-    <geotools.version>22-SNAPSHOT</geotools.version>
+    <!-- the sources use Java 7 syntax (diamond, multi-catch) and java.util.Base64 (Java 8) -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <mainClass>gui.VennMaker</mainClass>
   </properties>
-    
+
   <dependencies>
-  
-<dependency>
-	<groupId>org.json</groupId>
-	<artifactId>json</artifactId>
-	<version>20140107</version>
-</dependency>
-
-  	<dependency>
-  		<groupId>org.codeartisans.thirdparties.swing</groupId>
-  		<artifactId>batik-all</artifactId>
-  		<version>1.8pre-r1084380</version>
-  		<type>jar</type>
-  		<scope>compile</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.swinglabs</groupId>
-  		<artifactId>swingx</artifactId>
-  		<version>1.6.1</version>
-  		<type>jar</type>
-  		<scope>compile</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>net.iharder</groupId>
-  		<artifactId>base64</artifactId>
-  		<version>2.3.8</version>
-  		<type>jar</type>
-  		<scope>compile</scope>
-  	</dependency>
-	<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
-	<dependency>
-	    <groupId>com.thoughtworks.xstream</groupId>
-	    <artifactId>xstream</artifactId>
-	    <version>1.4.18</version>
-	</dependency>
-
-  	<dependency>
-  		<groupId>xpp3</groupId>
-  		<artifactId>xpp3_min</artifactId>
-  		<version>1.1.4c</version>
-  		<type>jar</type>
-  		<scope>compile</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>xmlpull</groupId>
-  		<artifactId>xmlpull</artifactId>
-  		<version>1.1.3.4d_b4_min</version>
-  		<type>jar</type>
-  		<scope>compile</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>xpp3</groupId>
-  		<artifactId>xpp3</artifactId>
-  		<version>1.1.4c</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.apache.derby</groupId>
-  		<artifactId>derby</artifactId>
-  		<version>10.9.1.0</version>
-  	</dependency>
-
 
     <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-shapefile</artifactId>
-            <version>22-SNAPSHOT</version>
-   </dependency>
-   <dependency>
-        <groupId>org.geotools</groupId>
-        <artifactId>gt-swing</artifactId>
-        <version>${geotools.version}</version>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20140107</version>
     </dependency>
 
+    <!-- local jar, so far only referenced from the Eclipse .classpath -->
+    <dependency>
+      <groupId>org.jvnet.flamingo</groupId>
+      <artifactId>flamingo</artifactId>
+      <version>3.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/flamingo.jar</systemPath>
+    </dependency>
 
-        
-        
+    <dependency>
+      <groupId>org.codeartisans.thirdparties.swing</groupId>
+      <artifactId>batik-all</artifactId>
+      <version>1.8pre-r1084380</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.swinglabs</groupId>
+      <artifactId>swingx</artifactId>
+      <version>1.6.1</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.iharder</groupId>
+      <artifactId>base64</artifactId>
+      <version>2.3.8</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
+    <dependency>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>1.4.18</version>
+    </dependency>
+    <dependency>
+      <groupId>xpp3</groupId>
+      <artifactId>xpp3_min</artifactId>
+      <version>1.1.4c</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>xmlpull</groupId>
+      <artifactId>xmlpull</artifactId>
+      <version>1.1.3.4d_b4_min</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>xpp3</groupId>
+      <artifactId>xpp3</artifactId>
+      <version>1.1.4c</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.derby</groupId>
+      <artifactId>derby</artifactId>
+      <version>10.9.1.0</version>
+    </dependency>
+
+    <!--
+      The geotools 22-SNAPSHOT dependencies (gt-shapefile, gt-swing) were removed:
+      no source file under src/main/java imports org.geotools, and their snapshot
+      repository (repo.boundlessgeo.com) no longer exists. If the optional shapefile
+      module in module/vennmakerhistshape.jar is revived, re-add them against a
+      released version from https://repo.osgeo.org/repository/release/
+    -->
+
   </dependencies>
 
+  <build>
+    <resources>
+      <!--
+        The resource bundles (messages*.properties) and .form files live next to
+        the sources in src/main/java. Eclipse copies them to the output folder
+        automatically, Maven needs to be told.
+      -->
+      <resource>
+        <directory>src/main/java</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
 
-
-  <!-- change geotools repository info according to http://docs.geotools.org/latest/userguide/tutorial/quickstart/maven.html -->
-  <repositories>
-        <repository>
-            <id>maven2-repository.dev.java.net</id>
-            <name>Java.net repository</name>
-            <url>http://download.java.net/maven/2</url>
-        </repository>
-        <repository>
-            <id>osgeo</id>
-            <name>Open Source Geospatial Foundation Repository</name>
-            <url>http://download.osgeo.org/webdav/geotools/</url>
-        </repository>
-        <repository>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-          <id>boundless</id>
-          <name>Boundless Maven Repository</name>
-          <url>http://repo.boundlessgeo.com/main/</url>
-        </repository>
-    </repositories>
-    
-    
-
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <mainClass>${mainClass}</mainClass>
+          <!-- "compile" instead of the default "runtime" so the system-scoped flamingo.jar is on the classpath -->
+          <classpathScope>compile</classpathScope>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
